@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../footer.css" />
+    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <title>Personal Distributor</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="http://www.personaldistributor.com"
+          >Personal Distributor</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/home-website/index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/home-website/posts.html">All Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/home-website/dashboard.html"
+                >Dashboard</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/home-website/areasurvey.html"
+                >Area Survey</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="/permanentmarket.html"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Marketplace
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/home-website/permanentmarket.html"
+                    >Permanent Markets</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/home-website/onedaymarket.html"
+                    >One-Day Markets</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-danger" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--  -->
+    <div class="row">
+      <div class="col-10">
+        <div class="tab-content" id="nav-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="list-allproduct"
+            role="tabpanel"
+            aria-labelledby="list-allproduct-list"
+          >
+            <!--  -->
+            <div class="container-fluid">
+              <!--  -->
+              <button
+                class="btn form-control"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo"
+                name="Message"
+                id="post"
+                rows="1"
+              >
+                Write a Post..
+              </button>
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Add a new Post
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="file-name" class="col-form-label"
+                            >Add Image/Video</label
+                          >
+                          <input
+                            type="file"
+                            class="form-control"
+                            id="file-name"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label"
+                            >Message:</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="message-text"
+                          ></textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Add Post
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="btn-group postbutton"
+              role="group"
+              aria-label="Basic example"
+            >
+              <button type="button" class="btn">
+                <img
+                  src="./Images/live.png"
+                  height="30px"
+                  width="30px"
+                  alt=""
+                />
+                <span style="font-weight: bold; color: blueviolet">Live</span>
+              </button>
+              <button type="button" class="btn">
+                <img
+                  src="./Images/gallery.png"
+                  height="25px"
+                  width="25px"
+                  alt=""
+                />
+                <span style="font-weight: bold; color: blueviolet">Photos</span>
+              </button>
+              <button type="button" class="btn">
+                <img
+                  src="./Images/video.png"
+                  height="30px"
+                  width="30px"
+                  alt=""
+                />
+                <span style="font-weight: bold; color: blueviolet"
+                  >Webinar</span
+                >
+              </button>
+            </div>
+            <!--  -->
+            <div
+              class="row row-cols-1 row-cols-md-4 g-4"
+              id="card-show"
+              style="text-align: center; margin: 3vh 3vw"
+            ></div>
+            <!--  -->
+          </div>
+          <div
+            class="tab-pane fade"
+            id="list-post"
+            role="tabpanel"
+            aria-labelledby="list-post-list"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="list-survey"
+            role="tabpanel"
+            aria-labelledby="list-survey-list"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="list-groups"
+            role="tabpanel"
+            aria-labelledby="list-groups-list"
+          >
+            ...
+          </div>
+          <!-- <div
+            class="tab-pane fade"
+            id="list-productmanagement"
+            role="tabpanel"
+            aria-labelledby="list-productmanagement-list"
+          ></div> -->
+          <div
+            class="tab-pane fade"
+            id="list-barter"
+            role="tabpanel"
+            aria-labelledby="list-barter-list"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="list-profile"
+            role="tabpanel"
+            aria-labelledby="list-profile-list"
+          ></div>
+          <div
+            class="tab-pane fade"
+            id="list-portfolio"
+            role="tabpanel"
+            aria-labelledby="list-portfolio-list"
+          >
+            ...
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="sidebar">
+          <div class="toggle">
+          <!-- <button class="sidebar-toggle"> -->
+           <img class="sidebar-toggle" src="./Images/up-arrow.svg" alt="">
+          <!-- </button> -->
+          </div>
+          <div class="list-group" id="list-tab" role="tablist">
+            <a
+              class="list-group-item list-group-item-action"
+              href="./product-division.html"
+              >Product Management</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-portfolio-list"
+              data-bs-toggle="list"
+              href="#list-portfolio"
+              role="tab"
+              aria-controls="list-portfolio"
+              >Portfolio Balance</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-survey-list"
+              data-bs-toggle="list"
+              href="#list-survey"
+              role="tab"
+              aria-controls="list-survey"
+              >Survey/Feedback</a
+            >
+            <a
+              class="list-group-item list-group-item-action active"
+              id="list-allproduct-list"
+              data-bs-toggle="list"
+              href="#list-allproduct"
+              role="tab"
+              aria-controls="list-allproduct"
+              >All Products</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-barter-list"
+              data-bs-toggle="list"
+              href="#list-barter"
+              role="tab"
+              aria-controls="list-barter"
+              >Barter Report</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-profile-list"
+              data-bs-toggle="list"
+              href="#list-profile"
+              role="tab"
+              aria-controls="list-profile"
+              >My Profile</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-post-list"
+              data-bs-toggle="list"
+              href="#list-post"
+              role="tab"
+              aria-controls="list-post"
+              >My Posts</a
+            >
+
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-groups-list"
+              data-bs-toggle="list"
+              href="#list-groups"
+              role="tab"
+              aria-controls="list-groups"
+              >Groups</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <footer class="footer">
+      <div class="f-container">
+        <div class="f-containerx">
+          <div
+            style="
+              display: flex;
+              text-align: center;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <a href="../termscondition.html" style="margin: 1rem 2rem 1rem 2rem"
+              >Terms and Conditions</a
+            >
+            <a href="../privacypolicy.html" style="margin: 1rem 2rem 1rem 2rem"
+              >Privacy Policy</a
+            >
+
+            <a href="../shipment.html" style="margin: 1rem 2rem 1rem 2rem"
+              >Shipments & Replacements</a
+            >
+          </div>
+          <p>
+            Content and Concept is owned by Clever Technologies Pvt. Ltd. © 2021
+          </p>
+          <p>Subject to litigation.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use-->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <!--https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script src="./js/database.js"></script>
+  </body>
+  <script src="./js/sidebar.js"></script>
+</html>
