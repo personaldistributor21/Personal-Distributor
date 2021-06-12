@@ -1,0 +1,133 @@
+@media only screen and (min-width: 200px) and (max-width: 500px) {
+  .left-sec h1 {
+    font-size: 2rem;
+    white-space: nowrap;
+    margin: 0%;
+  }
+
+  .desc {
+    font-family: "EB Garamond", serif;
+    font-size: 1.5rem;
+    position: relative;
+    left: 5px;
+    top: 0px;
+    white-space: nowrap;
+  }
+  .mainheader .logo h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 30px;
+    margin-top: 1px;
+  }
+  .lgo-image {
+    margin-top: -20px;
+    margin-left: 110px;
+    padding: 30px;
+    padding-bottom: 0px;
+    display: flex;
+    align-items: center;
+  }
+  #dog {
+    opacity: 0;
+    width: 250px;
+    height: 150px;
+    margin-top: -2rem;
+    margin-left: 50vw;
+  }
+  .left-sec h2 {
+    padding: 0%;
+    font-size: x-large;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  .left-sec h1 {
+    font-size: 2.5rem;
+  }
+  .mainheader .logo h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 30px;
+    margin-top: 1px;
+  }
+  .desc {
+    font-family: "EB Garamond", serif;
+    font-size: 1.5rem;
+    left: 5px;
+    top: 0px;
+    white-space: nowrap;
+  }
+  .lgo-image {
+    margin-top: -20px;
+    margin-left: 110px;
+    padding: 30px;
+    padding-bottom: 0px;
+    display: flex;
+    align-items: center;
+  }
+  .left-sec h2 {
+    padding: 0%;
+  }
+  #dog {
+    opacity: 0;
+    animation: slide 8.95s -0.01s infinite;
+    width: 250px;
+    height: 150px;
+    margin-left: 9rem;
+    margin-top: -5rem;
+  }
+  .footer {
+    bottom: 2vh;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+
+    width: 950px;
+    margin: 80px auto;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+  .mainheader .logo h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 35px;
+    margin-top: 2px;
+  }
+  .desc {
+    font-family: "EB Garamond", serif;
+    font-size: 2rem;
+    left: 5px;
+    top: 0px;
+    white-space: nowrap;
+    padding-left: 2rem;
+  }
+  .left-sec h1 {
+    margin: 0rem;
+    font-size: 3rem;
+  }
+  .lgo-image {
+    margin-top: -10px;
+    margin-left: 150px;
+  }
+  .left-sec h2 {
+    padding-left: 50px;
+  }
+  #dog {
+    opacity: 0;
+    animation: slide 8.95s -0.01s infinite;
+    width: 350px;
+    height: 250px;
+    margin-left: 4rem;
+    margin-top: -8rem;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1300px) {
+  .left-sec h1 {
+    margin: 0rem;
+    font-size: 3.5rem;
+  }
+  #dog {
+    opacity: 0;
+    animation: slide 8.95s -0.01s infinite;
+    width: 350px;
+    height: 250px;
+    margin-left: 2rem;
+    margin-top: -3rem;
+  }
+}

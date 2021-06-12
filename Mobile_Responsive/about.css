@@ -1,0 +1,76 @@
+@media only screen and (min-width: 200px) and (max-width: 500px) {
+  .mainheader .logo h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 1.5rem;
+    padding-left: 40px;
+    white-space: nowrap;
+  }
+  .desc {
+    font-size: 10px;
+    white-space: nowrap;
+    display: block;
+  }
+  .mainheader .btn {
+    padding-left: 50px;
+  }
+  .about h1 {
+    white-space: nowrap;
+    font-size: 1.3rem;
+    margin-left: 6rem;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  .mainheader .logo h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 1.7rem;
+    padding-left: 40px;
+    white-space: nowrap;
+  }
+  .desc {
+    margin: 1rem;
+    font-size: 13px;
+    white-space: nowrap;
+    display: block;
+  }
+  .mainheader .btn {
+    padding-left: 70px;
+  }
+  .about h1 {
+    white-space: nowrap;
+    font-size: 1.7rem;
+    margin-left: 4rem;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 1100px) {
+  .mainheader .logo h3 {
+    margin-top: 1rem;
+    font-size: 35px;
+    white-space: nowrap;
+  }
+  .desc {
+    font-family: "EB Garamond", serif;
+    font-size: 2rem;
+    margin: 1rem 1rem;
+    white-space: nowrap;
+    display: block;
+  }
+  .mainheader .btn {
+    padding-left: 70px;
+  }
+  .about h1 {
+    white-space: nowrap;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1400px) {
+  .mainheader .logo h3 {
+    font-size: 3rem;
+    padding-left: 40px;
+    white-space: nowrap;
+  }
+  .desc {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+}
