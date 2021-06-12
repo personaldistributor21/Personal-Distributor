@@ -1,0 +1,32 @@
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+.col-10 {
+  text-align: center;
+}
+.list-group-item {
+ 
+  border: 0px !important;
+}
+.list-group a {
+  background-color: blue;
+  color: white;
+}
+
+#list-tab a {
+  text-decoration: underline;
+}
+.list-group {
+  text-align: left;
+  padding-top: 5%;
+  background-color: blue;
+  padding-bottom: 100%;
+  margin-bottom: -15vh;
+}
+
+.navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 1;
+}

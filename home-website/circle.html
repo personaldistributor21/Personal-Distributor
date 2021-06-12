@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, 
+        initial-scale=1.0, 
+        user-scalable=no"
+    />
+    <title>Drag/Drop/Bounce</title>
+    <style>
+      #outerContainer {
+        background-color: cadetblue;
+        padding: 3%;
+        position: relative;
+      }
+      #container {
+        width: 35vw;
+        height: 35vw;
+        background-color: rgb(202, 202, 202);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 7px;
+        touch-action: none;
+        margin: auto;
+        position: relative;
+        /* padding: 2%; */
+      }
+      #item {
+        width: 15vw;
+        height: 15vw;
+        /* background-color: rgb(245, 230, 99); */
+        border: 5px solid rgb(0, 0, 0);
+        border-style: dashed;
+        text-decoration: dashed;
+        border-radius: 50%;
+        touch-action: none;
+        user-select: none;
+      }
+      .x-axis {
+        position: absolute;
+        width: 30vw;
+        border: solid rgb(53, 53, 206) 3px;
+      }
+      .y-axis {
+        position: absolute;
+        height: 30vw;
+        border: solid rgb(53, 53, 206) 3px;
+      }
+      #item:active {
+        background-color: rgba(168, 218, 230, 1);
+        opacity: 0.3;
+      }
+      #item:hover {
+        cursor: pointer;
+        border-width: 5px;
+      }
+      .leftarrow {
+        position: absolute;
+        left: 1vw;
+        transform: rotate(180deg);
+      }
+      .rightarrow {
+        position: absolute;
+        right: 1vw;
+      }
+      .toparrow {
+        position: absolute;
+        top: 1vw;
+        transform: rotate(-90deg);
+      }
+      .bottomarrow {
+        position: absolute;
+        bottom: 1vw;
+        transform: rotate(90deg);
+      }
+      .topHeading {
+        font-size: 1.5vw;
+        position: absolute;
+        top: 0vw;
+        left: 47%;
+      }
+      .rightHeading {
+        font-size: 1.5vw;
+        position: absolute;
+        top: 18vw;
+        right: 19vw;
+      }
+      .bottomHeading {
+        font-size: 1.5vw;
+        position: absolute;
+        bottom: 1vw;
+        left: 48.5%;
+      }
+      .leftHeading {
+        font-size: 1.5vw;
+        position: absolute;
+        left: 26.5vw;
+        top: 18vw;
+      }
+      .color {
+        position: absolute;
+        top: 10%;
+        right: 20%;
+        width: 5%;
+        height: 5%;
+        background-color: blue;
+        opacity: 0.3;
+      }
+      .color1 {
+        position: absolute;
+        top: 15%;
+        right: 20%;
+        width: 5%;
+        height: 5%;
+        background-color: green;
+        opacity: 0.3;
+      }
+      .color2 {
+        position: absolute;
+        top: 20%;
+        right: 20%;
+        width: 5%;
+        height: 5%;
+        background-color: yellow;
+        opacity: 0.3;
+      }
+      .color3 {
+        position: absolute;
+        top: 25%;
+        right: 20%;
+        width: 5%;
+        height: 5%;
+        background-color: red;
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="outerContainer">
+      <div id="container">
+        <img
+          class="leftarrow"
+          src="./Images/right-arrow.svg"
+          alt=""
+          srcset=""
+          width="25vw"
+        />
+        <img
+          class="rightarrow"
+          src="./Images/right-arrow.svg"
+          alt=""
+          srcset=""
+          width="25vw"
+        />
+        <img
+          class="toparrow"
+          src="./Images/right-arrow.svg"
+          alt=""
+          srcset=""
+          width="25vw"
+        />
+        <img
+          class="bottomarrow"
+          src="./Images/right-arrow.svg"
+          alt=""
+          srcset=""
+          width="25vw"
+        />
+        <div class="x-axis"></div>
+        <div class="y-axis"></div>
+        <div id="item"></div>
+      </div>
+      <h3 class="topHeading">Superiority</h3>
+      <h3 class="rightHeading">Commision/gratuity</h3>
+      <h3 class="bottomHeading">Media</h3>
+      <h3 class="leftHeading">Appeals</h3>
+      <div class="color" id="colorDiv1"></div>
+      <div class="color1" id="colorDiv2"></div>
+      <div class="color2" id="colorDiv3"></div>
+      <div class="color3" id="colorDiv4"></div>
+      <h1 class="values" id="val"></h1>
+    </div>
+
+    <script>
+      var dragItem = document.querySelector("#item");
+      var container = document.querySelector("#container");
+      var colorDiv1 = document.getElementById("colorDiv1");
+      var colorDiv2 = document.getElementById("colorDiv2");
+      var colorDiv3 = document.getElementById("colorDiv3");
+      var colorDiv4 = document.getElementById("colorDiv4");
+      var active = false;
+      var currentX;
+      var currentY;
+      var initialX;
+      var initialY;
+      var xOffset = 0;
+      var yOffset = 0;
+      var val = document.getElementById("val");
+      container.addEventListener("touchstart", dragStart, false);
+      container.addEventListener("touchend", dragEnd, false);
+      container.addEventListener("touchmove", drag, false);
+
+      container.addEventListener("mousedown", dragStart, false);
+      container.addEventListener("mouseup", dragEnd, false);
+      container.addEventListener("mousemove", drag, false);
+
+      function dragStart(e) {
+        if (e.type === "touchstart") {
+          initialX = e.touches[0].clientX - xOffset;
+          initialY = e.touches[0].clientY - yOffset;
+        } else {
+          initialX = e.clientX - xOffset;
+          initialY = e.clientY - yOffset;
+        }
+
+        if (e.target === dragItem) {
+          active = true;
+        }
+      }
+
+      function dragEnd(e) {
+        initialX = currentX;
+        initialY = currentY;
+
+        active = false;
+      }
+
+      function drag(e) {
+        if (active) {
+          e.preventDefault();
+
+          if (e.type === "touchmove") {
+            currentX = e.touches[0].clientX - initialX;
+            currentY = e.touches[0].clientY - initialY;
+          } else {
+            currentX = e.clientX - initialX;
+            currentY = e.clientY - initialY;
+            val.innerText =
+              xOffset + " " + yOffset + " " + currentX + " " + currentY;
+          }
+          if (currentX > 110) {
+            currentX = 110;
+          }
+          if (currentX < -110) {
+            currentX = -110;
+          }
+          if (currentY > 110) {
+            currentY = 110;
+          }
+          if (currentY < -110) {
+            currentY = -110;
+          }
+          xOffset = currentX;
+          yOffset = currentY;
+          setTranslate(currentX, currentY, dragItem);
+        }
+      }
+
+      // function colorSet(colorDiv3,colorDiv2,colorDiv1,x,y){
+      //   if (Math.abs(x) > 100 && Math.abs(y) > 100) {
+      //       colorDiv1.style.opacity = "0.3";
+      //       colorDiv2.style.opacity = "0.3";
+      //       colorDiv3.style.opacity = "0.3";
+      //     } else if (Math.abs(x) > 100 && Math.abs(y)> 50) {
+      //       colorDiv3.style.opacity = "0.6";
+      //       colorDiv1.style.opacity = "0.3";
+      //       colorDiv2.style.opacity = "0.3";
+      //     } else {
+      //       colorDiv3.style.opacity = "0.8";
+      //     }
+
+      // }
+      function setTranslate(xPos, yPos, el) {
+        el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+        val.innerText = xPos + " " + yPos;
+        if (xPos < 0 && yPos < 0) {
+          colorDiv1.style.opacity = "1";
+          colorDiv1.style.backgroundColor = "blue";
+          colorDiv3.style.opacity = "0.3";
+          colorDiv2.style.opacity = "0.3";
+          colorDiv4.style.opacity = "0.3";
+          // colorSet(colorDiv3,colorDiv2,colorDiv4,xPos,yPos);
+        }
+        if (xPos < 0 && yPos > 0) {
+          colorDiv2.style.opacity = "1";
+          colorDiv2.style.backgroundColor = "green";
+          colorDiv3.style.opacity = "0.3";
+          colorDiv1.style.opacity = "0.3";
+          colorDiv4.style.opacity = "0.3";
+          // colorSet(colorDiv1,colorDiv3,colorDiv4,xPos,yPos);
+        }
+        if (xPos > 0 && yPos < 0) {
+          colorDiv3.style.opacity = "1";
+          colorDiv3.style.backgroundColor = "yellow";
+          colorDiv1.style.opacity = "0.3";
+          colorDiv2.style.opacity = "0.3";
+          colorDiv4.style.opacity = "0.3";
+          // colorSet(colorDiv2,colorDiv1,colorDiv4,xPos,yPos);
+        }
+        if (xPos > 0 && yPos > 0) {
+          colorDiv4.style.backgroundColor = "red";
+          colorDiv4.style.opacity = "1";
+          colorDiv1.style.opacity = "0.3";
+          colorDiv2.style.opacity = "0.3";
+          colorDiv3.style.opacity = "0.3";
+          //  colorSet(colorDiv3,colorDiv2,colorDiv1,xPos,yPos);
+        }
+      }
+    </script>
+  </body>
+</html>
