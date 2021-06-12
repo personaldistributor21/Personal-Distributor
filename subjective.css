@@ -1,0 +1,57 @@
+.outer-circle {
+  position: relative;
+  margin: 6rem auto 1rem auto;
+  border: solid rgba(0, 0, 0, 0.7) 3vh;
+  border-radius: 50%;
+  height: 27rem;
+  width: 27rem;
+  text-align: center;
+  color: white;
+}
+.circle1 img {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.circle2 img {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+.circle3 img {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  left: 100%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.circle4 img {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.circle5 img {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+img:hover {
+  height: 55%;
+  width: 55%;
+}

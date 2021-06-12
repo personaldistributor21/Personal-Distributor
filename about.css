@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+  font-family: "EB Garamond", serif;
+}
+nav {
+  position: sticky !important;
+  top: 0;
+  z-index: 100;
+}
+.about-heading {
+  font-family: "EB Garamond", serif;
+  text-align: center;
+  margin: 3rem 1rem 2rem 1rem;
+  /* white-space: nowrap; */
+  margin-top: 10%;
+}
+@media (min-width: 768px) {
+  .row-cols-md-4 > * {
+    margin: 6vh auto 2vh auto !important;
+    flex: 0 0 auto !important;
+    align-items: center;
+    width: 23% !important;
+    justify-content: center;
+    background: aqua;
+    margin-right: 23px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+  }
+}
+/* @media (min-width: 268px) {
+  .row-cols-2 > * {
+    align-items: center;
+    background: aqua;
+    text-align: center;
+    border-radius: 20px;
+  }
+} */
+
+.about-card > button {
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-size: 17px;
+  padding: 1% 4%;
+}
+
+.about-card p {
+  font-size: 14.8px;
+  margin: 3rem 1rem 4rem 1rem;
+}
+.about-body img {
+  height: 15vh;
+  width: 50%;
+  margin: 10% auto;
+}
+.need {
+  margin-top: 30vh;
+  text-align: center;
+}
+
+.need-row1 p {
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.need-row1 a {
+  color: #0000ee;
+}
+.need-row2 p {
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.need-row1 .card {
+  width: 100%;
+  border: none;
+}
+.card-heading {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.need-row2 .card {
+  width: 100%;
+  border: none;
+}
+.need-container .card {
+  flex-direction: row;
+  margin: 1rem 0rem;
+}
+.need-container img {
+  width: 17vw;
+  height: 17vh;
+  margin-top: 1.5rem;
+  border: solid black 3px;
+}
+.Mission {
+  text-align: center;
+  margin: 25vh 4vw 10vh 4vw;
+}
+.mission-card img {
+  width: 23vw;
+  height: 16rem;
+  margin: 3rem 3rem 0rem 0rem;
+  background-color: white;
+}
+.mission-card {
+  margin: 3% 2% 3% 3%;
+}
+.mission-card > .card-body {
+  background-color: rgb(63, 205, 248);
+}
+
+.mission-card .card-title {
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 35px;
+}
+.mission-card .card-text {
+  color: black;
+  padding-bottom: -1px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 23px;
+  margin-left: 1rem;
+}
+.quote h2 {
+  text-align: center;
+  margin: 2rem 1rem 2rem 1rem !important;
+  word-spacing: 5px !important;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 40px !important;
+  font-weight: inherit;
+  letter-spacing: 3px;
+  color: black;
+}
+.manage {
+  margin-top: 30vh;
+  text-align: center;
+}
+.manage-row1 .card {
+  width: 100%;
+  border: none;
+  background-color: rgb(173, 255, 255);
+}
+.manage-row1 .card-title {
+  font-weight: bold;
+  margin: 1rem;
+}
+.manage-row2 .card-title {
+  font-weight: bold;
+  margin: 1rem;
+}
+.manage-row2 p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 19px;
+  margin: 1rem;
+}
+.manage-row1 p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 19px;
+  margin: 1rem;
+}
+.manage-row2 .card {
+  width: 100%;
+  border: none;
+  background-color: rgb(173, 255, 255);
+}
+.manage-row1 .card-body {
+  background-color: rgb(173, 255, 255);
+}
+.manage-row2 .card-body {
+  background-color: rgb(173, 255, 255);
+}
+.manage-container .card {
+  flex-direction: row;
+  margin: 1rem 0rem;
+}
+.manage-container img {
+  width: 6rem;
+  height: 6rem;
+  margin: auto 25px;
+}
+.experience-container p {
+  font-size: large;
+}
+.experience {
+  margin-top: 30vh;
+  text-align: center;
+}
+.experience-row1 .card {
+  width: 100%;
+  border: none;
+}
+.experience-row1 h3 {
+  margin: 1rem;
+  font-weight: bold;
+}
+.experience-row2 h3 {
+  margin: 1rem;
+  font-weight: bold;
+}
+.experience-row1 p {
+  font-family: "Times New Roman", Times, serif;
+  margin: 1rem;
+  font-size: 19px;
+}
+.experience-row2 p {
+  font-family: "Times New Roman", Times, serif;
+  margin: 1rem;
+  font-size: 19px;
+}
+.experience-row2 .card {
+  width: 100%;
+  border: none;
+}
+.experience-container .card {
+  flex-direction: row;
+  margin: 1rem 0rem;
+}
+.experience-container img {
+  width: 10vw;
+  height: 15vh;
+  margin-top: 5vh;
+}
+.organise {
+  font-family: Calibri;
+  font-weight: lighter;
+  margin: 25vh 1rem 6rem 2rem;
+  text-align: center;
+}
+.organise h1 {
+  margin-bottom: 3rem;
+}
+.organise img {
+  margin: auto;
+  width: 20vw;
+  height: 40vh;
+}
+.distributor {
+  margin: 25vh 1vw 3vh 1vw;
+  text-align: center;
+}
+.button-group {
+  /* white-space: nowrap; */
+  margin: 3rem auto;
+  text-align: center;
+}
+.button-group button {
+  padding: 1vh 4vw 1vh 4vw;
+}
+
+.button-group > .button1 {
+  border-radius: 50px 0px 0px 50px;
+}
+.button-group > .btn5 {
+  border-radius: 0px 50px 50px 0px;
+}
+.slider-box {
+  width: 100%;
+  height: 80vh;
+  margin: 30px auto;
+  position: relative;
+  top: 50px;
+  overflow: hidden;
+  background-color: white;
+}
+#slider {
+  display: inline-flex;
+  transition: 0.7s;
+}
+#slider img {
+  margin-left: 15vw;
+  height: 65vh;
+  width: 65vw;
+  background-color: white;
+}
+
+.footer {
+  bottom: 2vh;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  margin-top: 20vh;
+}

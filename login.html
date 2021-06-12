@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login And Registraton Form</title>
+  <link rel="stylesheet" href="loginstyle.css" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" /> -->
+  <link rel="stylesheet" href="./footer.css" />
+</head>
+
+<body style="font-family: Georgia, 'Times New Roman', Times, serif;">
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="http://www.personaldistributor.com">Personal Distributor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./HTML/support.html">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About You</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./HTML/contact.html">Contact Us</a>
+          </li> -->
+  <!-- <li class="nav-item">
+            <a class="nav-link" href="./HTML/testimonial.html">Testimonials</a>
+          </li> -->
+  <!-- </ul> -->
+  <!-- <form class="d-flex">
+           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" /> 
+        <a href="./login.html"> <button class="btn btn-outline-danger" type="Login">Login/SignUp </button></a>
+        </form> -->
+  <!-- </div>
+    </div>
+  </nav> -->
+  <div class="container-fluid">
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Log In
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            Register
+          </button>
+        </div>
+        <div class="social-icons">
+          <img src="img/fb.png" />
+          <img src="img/google.png" />
+          <img src="img/insta.png" />
+          <img src="img/twitter.png" />
+
+        </div>
+
+        <form id="login" class="input-group" style="font-size: 12.5px;">
+          <input type="text" class="input-field" placeholder="User Id/Email Id" required />
+          <input type="text" class="input-field" placeholder="Enter Password" required />
+          <input type="checkbox" class="check-box" /><span>Remember Password</span>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <form id="register" class="input-group1">
+          <h5 style=" margin-left:10%;margin-bottom:1%; color: red;"> Registerations are Closed for now!</h5>
+          <input type="email" class="input-field" placeholder="Enter Email Id" required />
+          <input type="text" class="input-field" placeholder="Enter Password" required />
+          <input type="text" class="input-field" placeholder="Company Name" required />
+          <input type="text" class="input-field" placeholder="Company Designation" required />
+          <!-- <input
+            type="text"
+            class="input-field"
+            placeholder="Company Designation"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Company Designation"
+            required
+          /> -->
+          <input type="checkbox" class="check-box" /><span>I agree to terms and conditions</span>
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <footer class="footer">
+    <div class="f-container">
+      <div class="f-containerx">
+        <div style="
+              display: flex;
+              text-align: center;
+              align-items: center;
+              justify-content: center;
+            ">
+          <a href="./termscondition.html" style="margin: 1rem 2rem 1rem 2rem">Terms and Conditions</a>
+          <a href="./privacypolicy.html" style="margin: 1rem 2rem 1rem 2rem">Privacy Policy</a>
+
+          <a href="./shipment.html" style="margin: 1rem 2rem 1rem 2rem">Shipments & Replacements</a>
+        </div>
+        <p>
+          Content and Concept is owned by Clever Technologies Pvt. Ltd. © 2021
+        </p>
+        <p>Subject to litigation.</p>
+      </div>
+    </div>
+  </footer> -->
+  <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+    function register() {
+      x.style.left = "-400px";
+      y.style.left = "50px";
+      z.style.left = "110px";
+    }
+    function login() {
+      x.style.left = "50px";
+      y.style.left = "450px";
+      z.style.left = "0px";
+    }
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  margin: 1rem 2rem;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.inner_header {
+  width: 90%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.logo_container {
+  height: 100%;
+  margin: 0 auto;
+  display: table;
+  float: left;
+}
+.logo_container h1 {
+  color: #101010;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 200;
+}
+.logo_container img {
+  width: 60px;
+  height: 55px;
+  margin-left: 80px;
+}
+.logo_container span {
+  font-weight: 800;
+  margin: 0 auto;
+}
+.navigation {
+  float: right;
+  height: 100%;
+}
+.navigation a {
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0px 20px;
+  margin: 0;
+}
+.navigation a:last-child {
+  padding-right: 0;
+}
+.navigation a li {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color: #101010;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+.form-box {
+  width: 380px;
+  height: 580px;
+  position: relative;
+  margin: 3% auto;
+  background: #c7c1bf1f;
+  padding: 5px;
+  overflow: hidden;
+  border-radius: 15px;
+  scroll-behavior: smooth;
+}
+#company-design {
+  display: flex;
+  margin: auto;
+}
+#company-design h2 {
+  /* color: rgba(170, 14, 14, 0.938); */
+  color: #333;
+  font-family: futura-pt, sans-serif;
+  font-size: 35px !important;
+  font-weight: 400;
+  letter-spacing: 10px;
+  line-height: 1.5;
+}
+
+.profile {
+  color: red;
+  background: skyblue;
+  white-space: normal;
+}
+
+.learn-more {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 0px;
+  white-space: nowrap;
+}
+
+.learn-more ul {
+  padding: 0px;
+}
+.learn-more ul li {
+  padding: 1vh 0vw;
+  margin: 0px;
+  list-style: none;
+  padding-left: 0px;
+  margin-left: 2vh;
+}
+.learn-more a {
+  color: black;
+  /* font-weight: bold; */
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0px;
+  white-space: nowrap;
+}
+.learn-more h3 {
+  color: #333;
+  letter-spacing: 0.2rem;
+  line-height: 1.1em;
+  margin-bottom: 1rem;
+  font-family: futura-pt, sans-serif;
+}
+/* .learn-more a:focus {
+  outline: 0;
+}*/
+.learn-more a:hover {
+  /* transform: scale(1.05); */
+  color: #000;
+  text-decoration: underline;
+}
+
+#company-timeline {
+  margin: auto;
+}
+#company-timeline h3 {
+  color: black;
+  /* margin-left: 24vw; */
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.company-image {
+  background: url("./img/bg3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
+  margin: 1rem 5rem;
+  height: 45vh;
+}
+.col-md-3 img {
+  margin-right: 0px;
+}
