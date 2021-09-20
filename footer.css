@@ -1,11 +1,22 @@
 .footer {
-  height: 20px;
+  padding: 2rem 0rem 4rem 0rem;
   text-align: center;
+  display: flex;
   vertical-align: middle;
-  width: 100%;
-  margin: 15vh auto;
+  align-items: center;
+  justify-content: center;
   border-top: 2px solid;
+  background-color: #694b74;
+  height: auto;
+  width: auto;
 }
-p{
+.footer p{
   margin-bottom: 0%;
+  color: white;
+}
+.footer a{
+  color: white;
+}
+.footer a:hover{
+color: white;
 }

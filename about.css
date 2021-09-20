@@ -25,14 +25,14 @@ nav {
   /* white-space: nowrap; */
   margin-top: 10%;
 }
-@media (min-width: 768px) {
-  .row-cols-md-4 > * {
+@media (min-width: 993px) {
+  .row-cols-lg-4 > * {
     margin: 6vh auto 2vh auto !important;
     flex: 0 0 auto !important;
     align-items: center;
     width: 23% !important;
     justify-content: center;
-    background: aqua;
+    background: #00c0f0;
     margin-right: 23px;
     padding: 10px;
     text-align: center;
@@ -47,7 +47,9 @@ nav {
     border-radius: 20px;
   }
 } */
-
+.about-body {
+  height: 100%;
+}
 .about-card > button {
   border-radius: 20px;
   font-family: "Roboto", sans-serif;
@@ -60,12 +62,21 @@ nav {
 
 .about-card p {
   font-size: 14.8px;
-  margin: 3rem 1rem 4rem 1rem;
+  margin: 3rem 1rem 0rem 1rem;
 }
+.about-card span {
+  padding: 1% 4%;
+  margin-bottom: 3rem;
+}
+
 .about-body img {
   height: 15vh;
   width: 50%;
   margin: 10% auto;
+}
+.surveying {
+  height: 11vh !important;
+  width: 40% !important;
 }
 .need {
   margin-top: 30vh;
@@ -74,18 +85,18 @@ nav {
 
 .need-row1 p {
   font-weight: 500;
-  letter-spacing: -0.5px;
+  /* letter-spacing: -0.5px; */
   font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-size: 17px;
 }
 .need-row1 a {
   color: #0000ee;
 }
 .need-row2 p {
   font-weight: 500;
-  letter-spacing: -0.5px;
+  /* letter-spacing: -0.5px; */
   font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .need-row1 .card {
@@ -109,25 +120,29 @@ nav {
   width: 17vw;
   height: 17vh;
   margin-top: 1.5rem;
-  border: solid black 3px;
+  margin-right: 30px;
+  /* border: solid black 3px; */
 }
 .Mission {
   text-align: center;
   margin: 25vh 4vw 10vh 4vw;
 }
 .mission-card img {
-  width: 23vw;
+  width: 20vw;
   height: 16rem;
   margin: 3rem 3rem 0rem 0rem;
   background-color: white;
 }
 .mission-card {
   margin: 3% 2% 3% 3%;
+  flex-direction: row!important;
+  background-color: blue !important;
+  border-radius: 20px !important;
+  border: none !important;
 }
 .mission-card > .card-body {
   background-color: rgb(63, 205, 248);
 }
-
 .mission-card .card-title {
   margin: 1rem;
   font-weight: bold;
@@ -137,7 +152,7 @@ nav {
   color: black;
   padding-bottom: -1px;
   font-family: "Times New Roman", Times, serif;
-  font-size: 23px;
+  font-size: 20px;
   margin-left: 1rem;
 }
 .quote h2 {
@@ -169,12 +184,12 @@ nav {
 }
 .manage-row2 p {
   font-family: "Times New Roman", Times, serif;
-  font-size: 19px;
+  font-size: 17px;
   margin: 1rem;
 }
 .manage-row1 p {
   font-family: "Times New Roman", Times, serif;
-  font-size: 19px;
+  font-size: 17px;
   margin: 1rem;
 }
 .manage-row2 .card {
@@ -195,7 +210,7 @@ nav {
 .manage-container img {
   width: 6rem;
   height: 6rem;
-  margin: auto 25px;
+  margin: 40px 25px auto 25px;
 }
 .experience-container p {
   font-size: large;
@@ -219,12 +234,12 @@ nav {
 .experience-row1 p {
   font-family: "Times New Roman", Times, serif;
   margin: 1rem;
-  font-size: 19px;
+  font-size: 17px;
 }
 .experience-row2 p {
   font-family: "Times New Roman", Times, serif;
   margin: 1rem;
-  font-size: 19px;
+  font-size: 17px;
 }
 .experience-row2 .card {
   width: 100%;
@@ -237,7 +252,7 @@ nav {
 .experience-container img {
   width: 10vw;
   height: 15vh;
-  margin-top: 5vh;
+  margin-top: 2rem;
 }
 .organise {
   font-family: Calibri;
@@ -250,18 +265,19 @@ nav {
 }
 .organise img {
   margin: auto;
-  width: 20vw;
-  height: 40vh;
+  width: 25%;
+  height: auto;
 }
 .distributor {
   margin: 25vh 1vw 3vh 1vw;
   text-align: center;
 }
 .button-group {
-  /* white-space: nowrap; */
+  white-space: nowrap;
   margin: 3rem auto;
   text-align: center;
 }
+
 .button-group button {
   padding: 1vh 4vw 1vh 4vw;
 }
@@ -272,12 +288,91 @@ nav {
 .button-group > .btn5 {
   border-radius: 0px 50px 50px 0px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .button-group {
+    font-size: x-small;
+  }
+  .button-group button {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+.mission-card {
+  display: block!important;
+  background-color: blue !important;
+  border-radius: 20px !important;
+  border: none !important;
+  margin: 5rem 0rem !important;
+}
+.mission-card img {
+  width: 100%;
+  height: 16rem;
+  margin: auto;
+  display: block;
+  background-color: white;
+}
+.manage-row1 .card{
+  display: block;
+}
+.manage-row1 img{
+  width: 30%;
+    margin: auto;
+    display: block;
+}
+.manage-row2 .card{
+  display: block;
+}
+.manage-row2 img{
+  width: 30%;
+    margin: auto;
+    display: block;
+}
+.experience-row1 .card {
+  display: block;
+  border: none;
+  text-align: center;
+}
+.experience-row1 img {
+ margin: auto;
+ display: block;
+ width: 50%;
+ height: auto;
+}
+.experience-row2 .card {
+  display: block;
+  border: none;
+  text-align: center;
+}
+.experience-row2 img {
+ margin: auto;
+ display: block;
+ width: 50%;
+ height: auto;
+}
+.need-container .card {
+ display: block;
+ text-align: center;
+}
+.need-container img {
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: auto;
+  /* border: solid black 3px; */
+}
+.sliderSelector .btn{
+  font-size: smaller;
+}
+
+}
+
 .slider-box {
   width: 100%;
-  height: 80vh;
+  height: auto;
   margin: 30px auto;
   position: relative;
-  top: 50px;
+  /* top: 50px; */
   overflow: hidden;
   background-color: white;
 }
@@ -286,17 +381,16 @@ nav {
   transition: 0.7s;
 }
 #slider img {
-  margin-left: 15vw;
-  height: 65vh;
-  width: 65vw;
+  width: 100%;
+  height: auto;
   background-color: white;
 }
 
-.footer {
+/* .footer {
   bottom: 2vh;
-  height: 40px;
-  text-align: center;
+  /* height: 40px; */
+  /*text-align: center;
   vertical-align: middle;
   width: 100%;
   margin-top: 20vh;
-}
+} */
