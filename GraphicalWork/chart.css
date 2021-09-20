@@ -1,0 +1,169 @@
+.container-fluid {
+  padding: 0%;
+  border: 2px solid black;
+}
+.chart {
+ 
+  text-align: center;
+  /* width: 100vw; */
+}
+#year {
+  background-color: #96466A;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+#arrow{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    /* bottom: -25%; */
+    left: 50%;
+    top: 15%;
+    cursor: pointer;
+}
+button{
+    border:none;
+}
+ul{
+    list-style: none;
+}
+.monthName {
+ 
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  padding: 0%;
+  border: 2px solid black;
+  justify-content: center;
+  text-align: center;
+}
+.monthName li {
+  /* padding: 1rem 2rem; */
+  border-right: 1px black solid;
+  padding-top: 15%;
+  background-color: #96466A;
+}
+.selectLabel{
+  background-color: #96466A;
+}
+.monthName select{
+  border-radius: 0% ;
+  grid-column-start: 2;
+  padding: 1rem 1rem;
+  border-right: 1px black solid;
+}
+li .months{
+  border: none;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #96466A;
+}
+/* .planLine{
+  display: flex;
+  align-items: center;
+} */
+#planLabel{
+  padding: 1rem;
+  grid-row-start:2;
+  grid-column-end: 2;
+  border-radius: 20px;
+}
+#planned {
+  font-size: x-small;
+  margin-top: 1.5rem;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 15;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgb(0, 119, 255);
+  text-align: center;
+  color: white;
+  height: 15px;
+}
+
+.plannedCircle {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  background-color: #96466A;
+  color: white;
+  /* box-shadow: rgba(245, 121, 20, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+}
+/* .costLine{
+  display: flex;
+  align-items: center;
+} */
+#costLabel{
+  grid-row-start:4;
+  grid-column-end: 2;
+  padding: 1rem;
+  border-radius: 20px;
+  white-space: nowrap; 
+}
+#cost {
+  margin: 1.5rem 0rem;
+  grid-row-start: 4;
+  grid-column-start: 2;
+  grid-column-end: 15;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgb(89, 99, 245);
+  text-align: center;
+  color: white;
+  height: 15px;
+}
+/* .actualLine{
+  display: flex;
+  align-items: center;
+} */
+
+#actualLabel{
+  padding: 1rem;
+  grid-row-start:3;
+  grid-column-end: 2;
+  border-radius: 20px;
+}
+
+#actual {
+  margin-top: 1.5rem;
+  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 15;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgb(28, 96, 241);
+  text-align: center;
+  color: white;
+  height: 15px;
+}
+
+.actualCircle {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  background-color: #96466A;
+  color: white;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+}
+
+#keysMilestones {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(255, 255, 255);
+}
+#keysMilestones li {
+    flex-basis: 30%;
+}
+#keysMilestones img {
+  height: 12rem;
+  width: 25rem;
+}
+#keysMilestones img:hover{
+  height: 13rem;
+  width: 26rem;
+}

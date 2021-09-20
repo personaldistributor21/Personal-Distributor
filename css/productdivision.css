@@ -1,0 +1,50 @@
+body {
+  overflow-x: hidden;
+}
+
+.card img {
+  width: 10rem;
+  height: 10rem;
+  margin: auto 25%;
+}
+.col-10 {
+  text-align: center;
+}
+#productadd {
+  cursor: pointer;
+}
+.list-group-item {
+  border: 0px !important;
+}
+.list-group a {
+  background-color: blue;
+  color: white;
+}
+#card-insertion {
+  margin: auto;
+}
+#list-tab a {
+  text-decoration: underline;
+}
+.list-group {
+  position: fixed;
+  padding-top: 8%;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+/* .change-cursor {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  color: grey !important;
+  text-decoration: none !important;
+} */
+.w-75{
+    height: 60vh !important;
+    margin: auto;
+}
+.navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 1;
+}

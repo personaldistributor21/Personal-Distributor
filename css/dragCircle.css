@@ -1,0 +1,142 @@
+#container {
+  width: 60rem;
+  height: 40rem;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 7px;
+  touch-action: none;
+  margin: auto;
+  position: relative;
+  /* padding: 2rem; */
+}
+#item {
+  width: 13.5rem;
+  height: 13.5rem;
+  /* background-color: rgb(245, 230, 99); */
+  border: 4px solid rgb(39, 38, 38);
+  border-style: dashed;
+  text-decoration: dashed;
+  border-radius: 50rem;
+  touch-action: none;
+  user-select: none;
+}
+.x-axis {
+  position: absolute;
+  width: 26rem;
+  border: solid rgb(53, 53, 206) 3px;
+}
+.y-axis {
+  position: absolute;
+  height: 26rem;
+  border: solid rgb(53, 53, 206) 3px;
+}
+#item:active {
+  background-color: rgba(168, 218, 230, 1);
+  opacity: 0.5;
+}
+#item:hover {
+  cursor: pointer;
+  border-width: 4px;
+}
+.leftarrow {
+  position: absolute;
+  left: 15.9rem;
+  transform: rotate(180deg);
+}
+.rightarrow {
+  position: absolute;
+  right: 15.9rem;
+}
+.toparrow {
+  position: absolute;
+  top: 5.9rem;
+  transform: rotate(-90deg);
+}
+.bottomarrow {
+  position: absolute;
+  bottom: 5.9rem;
+  transform: rotate(90deg);
+}
+.topHeading {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 4rem;
+  left: 26rem;
+}
+.rightHeading {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 19rem;
+  right: 10rem;
+}
+.bottomHeading {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 27.5rem;
+}
+.leftHeading {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 9.5rem;
+  top: 19rem;
+}
+.color {
+  position: absolute;
+  top: 10rem;
+  right: 5rem;
+  width: 4rem;
+  height: 2rem;
+  background-color: blue;
+}
+.color1 {
+  position: absolute;
+  top: 8rem;
+  right: 5rem;
+  width: 4rem;
+  height: 2rem;
+  background-color: blue;
+}
+.color2 {
+  position: absolute;
+  top: 4rem;
+  right: 5rem;
+  width: 4rem;
+  height: 2rem;
+  background-color: blue;
+}
+.color3 {
+  position: absolute;
+  top: 6rem;
+  right: 5rem;
+  width: 4rem;
+  height: 2rem;
+  background-color: blue;
+}
+.circleButton{
+  border: none;
+  background-color: rgb(241, 241, 241);
+
+}
+textarea{
+  width: 30rem;
+}
+#exampleModal2{
+  position: absolute;
+  left: 20rem;
+  top: 10rem;
+
+}
+#exampleModal3{
+  position:absolute;
+  top:20rem;
+  left: 0rem;
+}
+#exampleModal4{
+  position:absolute;
+  top:10rem;
+  left: -20rem;
+}
