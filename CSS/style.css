@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+header {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  /*background-image: url("../Images/mnhdr-bg.png");*/
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.mainheader {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainheader .logo h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 40px;
+  padding-left: 40px;
+}
+
+.desc {
+  font-family: "EB Garamond", serif;
+  font-size: 1rem;
+  position: relative;
+  left: 5px;
+  top: 0px;
+  white-space: nowrap;
+}
+.mainheader .btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.mainheader .btn .loginbtn {
+  margin: 20px;
+  margin-right: 7rem;
+}
+
+.mainheader .btn .loginbtn button {
+  padding: 10px 45px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+}
+.mid{
+  display: flex;
+  justify-content: space-between;
+}
+/*Logo Image*/
+/* .lgo-image {
+  display: inline-block;
+} */
+
+
+.right-sec {
+  margin-top: 5rem;
+  margin-right: 5rem;
+  background-color: transparent;    
+}
+.dog {
+  opacity: 0;
+  animation: slide 8.95s -0.01s infinite;
+  width: 400px;
+  height: 300px;
+
+}
+
+
+.lgo-image img {
+  background-color: transparent;
+  width: 180px;
+  margin-left: 90%;
+  height: 180px;
+  /* margin-left: -13px; */
+}
+.lgo-image h2 {
+  font-size: 30px;
+  letter-spacing: 10px;
+  margin-left: 64%;
+  font-family: Calibri;
+  text-transform: capitalize;
+  font-weight: lighter;
+  color: #3d7ba6;
+  margin-top: 3rem;
+  /*margin-left: 12px;*/
+  padding-bottom: 40px;
+  /* margin-left: 24%; */
+  white-space: nowrap;
+  /*background-color: yellow;*/
+}
+/*End Logo Image*/
+main{
+  display: flex;
+}
+.console-container {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  font-weight: lighter;
+  text-align: left;
+  height: auto;
+  margin-left: 10%;
+  background-color: transparent;
+  margin-top: -10%;
+}
+/* .console-underscore {
+  display: none;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+  color: black;
+} */
+.after-animation{
+  display: block;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.left-sec p {
+  text-transform: capitalize;
+  font-size: 20px;
+  white-space: nowrap;
+}
+.dropdownbar {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Dropdown Button*/
+
+main .left-sec .btn {
+  background-color:  #0f0d53;
+  padding: 12px 22px;
+  width: 200px;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "EB Garamond", serif;
+  border-radius: 0px;
+  border: 2px solid white;
+  color: white;
+}
+main .left-sec .btn:hover {
+  color: #694b74;
+  border-color: #b113eb;
+  background-color: transparent;
+}
+main .left-sec .btn:active .btn:focus {
+  border-color: #694b74;
+  color: #694b74;
+  box-shadow: none;
+  background-color: transparent;
+}
+.dropdown-signup {
+  background-color: #694b74 !important;
+  color: white;
+  font-size: 17px;
+  border-radius: 0 50px 50px 0 !important;
+  font-family: Calibri !important;
+}
+.dropdown-signup:hover {
+  background-color: #694b74 !important ;
+  color: rgb(245, 236, 236) !important;
+}
+.dropdownbar .dropdown:nth-child(1) .btn {
+  border-radius: 50px 0 0 50px;
+  margin-left: -100vw;
+}
+option {
+  color: black;
+  background-color: white;
+}
+
+
+
+@keyframes slide {
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.01;
+  }
+}
+.position-relative {
+  position: relative;
+}
+.position-relative span {
+  position: absolute;
+  margin-bottom: 5rem;
+}
+.VM80V span {
+  animation: _3z0d0;
+  animation-duration: 24s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  opacity: 0;
+}
+.VM80V span:nth-child(2) {
+  animation-delay: 2s;
+}
+.VM80V span:nth-child(3) {
+  animation-delay: 4s;
+}
+.VM80V span:nth-child(4) {
+  animation-delay: 6s;
+}
+.VM80V span:nth-child(5) {
+  animation-delay: 8s;
+}
+.VM80V span:nth-child(6) {
+  animation-delay: 10s;
+}
+.VM80V span:nth-child(7) {
+  animation-delay: 12s;
+}
+.VM80V span:nth-child(8) {
+  animation-delay: 14s;
+}
+.VM80V span:nth-child(9) {
+  animation-delay: 16s;
+}
+.VM80V span:nth-child(10) {
+  animation-delay: 18s;
+}
+.VM80V span:nth-child(11) {
+  animation-delay: 20s;
+}
+.VM80V span:nth-child(12) {
+  animation-delay: 22s;
+}
+@keyframes _3z0d0 {
+  0%,
+  2% {
+    opacity: 0;
+  }
+  3%,
+  5% {
+    opacity: 1;
+  }
+  11%,
+  100% {
+    opacity: 0;
+  }
+}

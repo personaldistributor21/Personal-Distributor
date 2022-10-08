@@ -1,0 +1,126 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+.upload{
+    position: absolute;
+    width: 50%;
+     height: 90%;
+     left: 25%;
+    top: 15%;
+    background-color: #fff;
+}
+.contract{
+  display: flex;  
+justify-content: center;  
+align-items: center;  
+}
+.contract button{
+    margin-top: 18px;
+    cursor: pointer;
+    border: none;
+    background: #694b74;
+    border-radius: 50px;
+    font-size: 20px;
+    color: white;
+    width: 250px;
+    height: 35px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+.hidden{
+    visibility: hidden;
+}
+.upload label{
+  margin-left: 90px;
+  font-size: 25px;
+}
+.select{
+  width: 40%;
+  height: 30px;
+  border: 1px solid ;
+  box-shadow: inset 0 3px 3px 0 rgba(#000, 0.15);
+  margin-left: 90px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 5px;
+}
+.upload input{
+  margin-left: 90px;
+  border: 1px solid ;
+  width: auto;
+  height: 30px;
+  width: 200px;
+  box-shadow: inset 0 3px 3px 0 rgba(#000, 0.15);
+  border-radius: 5px;
+}
+#year{
+  margin-bottom: 20px;
+}
+.drag-area {
+  height: 200px;
+  width: 80%;
+  border: 3px dashed #171718;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px 90px;
+  background-color: #e3baf0;
+}
+.drag-area header{
+  font-size: 30px;
+}
+.drag-area .header {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.drag-area .button {
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+  text-decoration: underline black;
+  cursor: pointer;
+}
+
+.drag-area.active {
+  border: 2px solid #1683ff;
+}
+
+.drag-area img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.upload button{
+  margin-top: 18px;
+    cursor: pointer;
+    border: none;
+    background: #694b74;
+    border-radius: 50px;
+    font-size: 20px;
+    color: white;
+    width: 250px;
+    height: 35px;
+    margin-left: 40%;
+    margin-bottom: 50px;
+}
+.upload select{
+  height: 30px;
+  border: 1px solid ;
+  box-shadow: inset 0 3px 3px 0 rgba(#000, 0.15);
+  border-radius: 5px;
+  background-color: white;
+}
+.build input{
+  margin-top: 20px;
+  height: 30px;
+  font-size: 23px;
+  margin-left: 36%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+

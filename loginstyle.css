@@ -14,7 +14,7 @@
 }
 .form-box {
   width: 380px;
-  height: 480px;
+  height: 520px;
   position: relative;
   margin: 6% auto;
   background: #c7c1bf1f;
@@ -88,6 +88,26 @@
   border-bottom: 1px solid #999;
   outline: none;
   background: transparent;
+  color: black;
+}
+input.input-field{
+  padding-left: 5px;
+}
+.select{
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px 0 7px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  float: left;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+  color: rgb(117, 116, 116);
+}
+.select option{
+  width: 100%;
   color: black;
 }
 .submit-btn {
