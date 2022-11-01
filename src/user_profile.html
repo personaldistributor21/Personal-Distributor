@@ -2,8 +2,14 @@
     <head>
         <link rel="stylesheet" href="user_profile.css" type="text/css" />
         <link rel="stylesheet" href="user_header.css" type="text/css" />
+        <link rel="stylesheet" href="dropdown.css" type="text/css" />
         <title>user</title>
         
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     </head>
     <body>
        <header class="global-nav">
@@ -121,15 +127,15 @@
             </div>
             <div class="basic">
                 <p>My Profile</p>
-                <label id="rank">RANKINGS</label>
-                <label>Your name</label>
-                <label>Contact Number</label>
-                <label>Email</label>
+                <label id="rank">RANKINGS</label><br>
+                <label>Your name</label><br>
+                <label>Contact Number</label><br>
+                <label>Email</label><br>
                 
                 <button id="compelete_pro_b">Complete your Profile</button>
             </div>
             <div class="rate">
-                <input type="radio" id="star5" name="rate" value="5" />
+               <br><input type="radio" id="star5" name="rate" value="5" />
                 <label for="star5" title="text">★</label>
                 <input type="radio" id="star4" name="rate" value="4" />
                 <label for="star4" title="text">★</label>
@@ -145,10 +151,33 @@
         <div class="fragment2">
             <label>Let's Go!</label>
             <hr>
-            <button type="submit" onclick="location.href='./build_contract.html'" >Build a digital Contract</button>
-            <button type="submit" onclick="location.href='./product.html'">Launch a Product</button>
-            <button type="submit" onclick="team_redirect_page()">Build a Team</button>
-            <button type="submit" onclick="location.href='./loan.html'">Loan it</button>
+            <div class="dropdown">
+                <button type="button" data-toggle="dropdown">Build a digital Contract 
+                <span class="caret" style="color: white;"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="./build_contract.html">Upload your own contract</a></li><hr>
+                  <li><a href="./build_online_contract.html">Build contract online</a></li>
+                </ul>
+              </div>
+
+            <div class="dropdown">
+                <button type="button" data-toggle="dropdown">Launch a Product 
+                <span class="caret" style="color: white;"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="../home-website/product-division.html">Genesis product</a></li><hr>
+                  <li><a href="#">Launch the project</a></li>
+                </ul>
+              </div>
+
+            <button type="submit" onclick="location.href='../home-website/product-division-team.html'">Build a Team</button>
+            <div class="dropdown">
+                <button type="button" data-toggle="dropdown">Loan it 
+                <span class="caret" style="color: white;"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="./lend_loan.html">Lend a Loan</a></li><hr>
+                  <li><a href="#">Give a Loan</a></li>
+                </ul>
+              </div>
         </div>
         <div class="fragment3">
             <label>My Dashboard</label>
@@ -244,5 +273,7 @@
         </div>
         
     <script src="./user_profile.js"></script>
+    <script src="../home-website/js/sidebar.js"></script>
+    <script src="./contract.js"></script>
     </body>
 </html>

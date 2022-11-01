@@ -4,43 +4,39 @@
         <title>contract</title>
     </head>
     <body>
-        <div class="contract">
-            <button id="upload_btn">Upload your own Contract</button>
-            <button id="build_btn" class="bc">Build Contract online</button>
+        <div class="upload">
+                     <h2>Upload your own Contract</h2><br>
+                     <form>
+                        <label>Type of contract:</label>
+                        <select>
+                        <option  value="" disabled selected hidden>- - select - -</option>
+                        <option value="Bilateral" >Bilateral</option>
+                        <option value="Unilateral">Unilateral</option>
+                        <option value="Irrevocable">Irrevocable</option>
+                        <option value="Others">Others</option>
+                        </select><br>
+                     
+                        <label>Duration of service:</label>
+                        <input type="text" placeholder="Number"><br>
+                        <label>End of contract:</label>
+                        <input type="date" placeholder="dd/mm/yyyy"><br><br>
+            
+                        <label>Upload PDF File</label>
+                    
+                    
+                        <div class="drag-area">
+                        <div class="icon"><img src="./images/uploadicon.png"></div>
+                        <header>Drop file here</header>
+                        <span class="header">or <span class="button">select file</span></span>
+                        <input type="file" hidden>
+                        </div><br>
+    
+                 <button>submit</button>
+
+                </form>
+            
         </div>
 
-        <div class="upload hidden">
-            <label>Type of contract</label><br>
-                <select  class="select">
-                <option  value="" disabled selected hidden>- - select - -</option>
-                <option value="Bilateral" >Bilateral</option>
-                <option value="Unilateral">Unilateral</option>
-                <option value="Irrevocable">Irrevocable</option>
-                <option value="Others">Others</option>
-                </select><br>
-
-             
-                <label>Duration of service</label><br>
-                <input type="text" placeholder="Number">
-                <input type="date" placeholder="dd/mm/yyyy"><br>
-
-            <label>Upload PDF File</label>
-         <div class="drag-area">
-            <div class="icon"><img src="./images/uploadicon.png"></div>
-            <header>Drop file here</header>
-            <span class="header">or <span class="button">select file</span></span>
-            <input type="file" hidden>
-         </div>
-         <button>submit</button>
-        </div>
-
-        <div class="build">
-            <input type="text" placeholder="Capacity"></br>
-            <input type="text" placeholder="Offer"></br>
-            <input type="text" placeholder="Acceptance"></br>
-            <input type="text" placeholder="Legality"></br>
-            <input type="text" placeholder="Consideration">  </br>          
-        </div>
     </body>
     <script src="./contract.js"></script>
 </html>

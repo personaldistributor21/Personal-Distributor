@@ -6,3 +6,4 @@ toggleBtn.addEventListener('click', function() {
   toggleBtn.classList.toggle('is-closed');
   sidebar.classList.toggle('is-closed');
 })
+

@@ -48,6 +48,3 @@ function toggleMenu(){
     subMenu.classList.toggle("active");
 }
 
-function team_redirect_page(){
-    
-}

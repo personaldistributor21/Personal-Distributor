@@ -95,7 +95,6 @@
   background: #694b74; 
   border: 0;
   outline: none;
-  border-radius: 50px;
   font-size: 20px;
   color: white;
   text-shadow: white  .02em   0     0, white  0       .02em 0,white -.02em   0     0, white  0      -.02em 0; 
@@ -137,7 +136,6 @@
   /* background: linear-gradient(to right, #36d1dc, #5b86e5); */
   border: 0;
   outline: none;
-  border-radius: 50px;
   font-size: 20px;
   color: white;
   text-shadow: white  .02em   0     0, white  0       .02em 0,white -.02em   0     0, white  0      -.02em 0; 

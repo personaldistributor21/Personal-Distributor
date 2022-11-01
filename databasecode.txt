@@ -1,0 +1,41 @@
+// Initialize Firebase
+    const app=initializeApp(firebaseConfig);
+    //intialize variables
+    const auth=firebase.auth();
+    const database=firebase.database();
+    
+function RegisterUser()
+{
+  var rname=document.getElementById("rname").value;
+var rmail=document.getElementById("rmail").value;
+var rpwd=document.getElementById("rpwd").value;
+var rcn=document.getElementById("cpname").value;
+var rcd=document.getElementById("desi").value;
+var rindustry=document.getElementById("industry").value;
+
+auth.createUserWithEmailAndPassword(rmail,rpwd)
+.then(function(){
+
+  var user=auth.currentUser
+
+  var database_ref=database.ref()
+
+  var user_data={
+    name:rname,
+    email:rmail,
+    company_name:rcn,
+    company_designation:rcd,
+    industry:rindustry,
+    last_login:Date.now()
+  }
+
+  database_ref.child('webuserslogin/' + user.uid).set(user_data);
+
+  alert("Register successfull");
+})
+.catch(function (error) {
+  var error_code=error.error_code
+  var error_msg=error.message
+
+  alert(error_msg)
+})

@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>contract</title>
+        <style>
+        body{
+            background-image: linear-gradient( rgba(255,0,0,0), rgb(223, 195, 240));
+            background-repeat: no-repeat;
+        }
+        p{
+            margin-left: 30%;
+        }
+        textarea{
+            width: 60%;
+            height: 10%;
+        }
+        div h2{
+           margin-left: 45%;
+        }
+        label{
+            font-size: 25px;
+        }
+        input,select{
+            width: 40%;
+            height: 4%;
+            border: 1px solid black;
+            font-size: 17px;
+        }
+        button{
+            background: #694b74;
+            width: 300px;
+           height: 35px;
+           font-size: 20px;
+           color: white;
+           border: 0;
+           margin-left: 45%;
+       
+        }
+        </style>
+    </head>
+    <body>
+        <div class="build">
+            <form>
+                <h2>Build contract online</h2><br>
+                <p><label>Type of contract:</label><br>
+                    <select>
+                    <option  value="" disabled selected hidden>- - select - -</option>
+                    <option value="Bilateral" >Bilateral</option>
+                    <option value="Unilateral">Unilateral</option>
+                    <option value="Irrevocable">Irrevocable</option>
+                    <option value="Others">Others</option>
+                    </select>
+                 </p>
+                 
+                <p><label>Duration of service:</label><br>
+                    <input type="text" placeholder="Number"></p>
+                <p><label>End of online contract:</label><br>
+                    <input type="date" placeholder="dd/mm/yyyy"></p>
+                
+                <p><label>Contract for:</label><br>
+                        <select>
+                            <option value="" disabled selected hidden>- - select - -</option>
+                            <option value="" >Product</option>
+                            <option value="">Services</option>
+                            </select></p>
+                    <p><label>Contract between:</label><br>
+                        <select>
+                            <option  value="" disabled selected hidden>- - select - -</option>
+                            <option value="" >Manufacturer and personal distributor</option>
+                            <option value="">Investors and personal distributor</option>
+                            <option value="" >Product and product managers</option>
+                            <option value="">Product manager and channel executives</option>
+                            <option value="" >Channel executives and agents</option>
+                            <option value="">Agents and retailers</option>
+                            <option value="">Product and retailers</option>
+                            </select></p>
+                      
+               <p><label>Capacity:</label><br>
+                <textarea rows="2"  cols="75"  placeholder="a person's ability to enter a contract.Please mention people who are anderage,mentally disabled,or intoxicated lack contractual capacity."></textarea>
+                </p>
+                <p><label>Offer:</label><br>
+                    <textarea rows="2" cols="75"  placeholder="The statement of terms and conditions of an agreement by which the offeror is willing to be bound."></textarea>
+                </p>
+                <p><label>Acceptance:</label><br>
+                    <textarea rows="2" cols="75"  placeholder="The offeree's acceptance of those terms and willingness to abide by the agreement."></textarea>
+                </p>
+                <p><label>Legality:</label><br>
+                    <textarea rows="2" cols="75"  placeholder="Whether or not the subject matter of the agreement is legal.State the judicial laws."></textarea>
+                </p>
+                <p><label>Consideration:</label><br>
+                    <textarea rows="2" cols="75"  placeholder="Kindly mention the exchange of one thing of value for another."></textarea>
+                </p>
+                <button>submit</button> 
+               
+            </form>
+            </div>
+    </body>
+</html>
