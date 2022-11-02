@@ -5,8 +5,6 @@
     font-family: sans-serif;
     color: black;
     box-sizing: border-box;
-   
-   
 }
 .btnshow{
     position: absolute;
@@ -292,7 +290,7 @@ select{
 .rate {
   height: 30px;
   position: absolute;
-  top: 49%;
+  top: 50%;
   left: 2%;
 }
 .rate:not(:checked) > input {
@@ -303,7 +301,7 @@ select{
   float:right;
   overflow:hidden;
   cursor:pointer;
-  font-size:30px;
+  font-size:22px;
   margin: 0%;
   color:rgb(181, 176, 182);
 }
@@ -337,6 +335,5 @@ select{
     width: 100vw;
     background-color: rgba(0,0,0,.75);
 }
-
 
 
