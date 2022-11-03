@@ -102,5 +102,28 @@ document.getElementById('login').addEventListener('submit', (e) => {
             });
         })
         
+    // function logoutuser(){
+
+    //     e.preventDefault();
+
+    //     signOut(auth).then(() => {
+    //         // Sign-out successful.
+    //        window.location = './login.html';
+    //       }).catch((error) => {
+    //         console.log(error);
+    //       });
+    // }
+    //     onAuthStateChanged(auth, (user) => {
+    //         if (user) {
+    //           // User is signed in, see docs for a list of available properties
+    //           // https://firebase.google.com/docs/reference/js/firebase.User
+    //           console.log('User is signed in');
+    //           // ...
+    //         } else {
+    //           console.log('User is signed out');
+    //           // ...
+    //         }
+    //       });
+
           
 
