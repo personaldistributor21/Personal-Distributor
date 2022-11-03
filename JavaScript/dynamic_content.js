@@ -2,6 +2,7 @@
 // consoleText(
 //   [
 //     "Decentralized Distribution.",
+//     "Lend retail Loan"
 //     "Progress with People.",
 //     "You Produce. We Sell.",
 //     "You Plan. We Execute.",
@@ -65,19 +66,37 @@
 //   }
 // }, 10);
 
+// window.onload = () => {
+//   const dog = document.getElementById("dog");
+//   const dogImgPaths = [
+//     "./Images/actual/india.png",
+//     "./Images/actual/2.jpg",
+//     "./Images/actual/3.jpg",
+//     "./Images/actual/4.jpg",
+//     "./Images/actual/5.png",
+//     "./Images/actual/6.png",
+//   ];
+//   let index = 0;
+//   setInterval(() => {
+//     index = (index + 1) % dogImgPaths.length;
+//     dog.src = dogImgPaths[index];
+//   }, 4200);
+// };
+
 window.onload = () => {
-  const dog = document.getElementById("dog");
-  const dogImgPaths = [
-    "./Images/actual/india.png",
-    "./Images/actual/2.jpg",
-    "./Images/actual/3.jpg",
-    "./Images/actual/4.jpg",
-    "./Images/actual/5.png",
-    "./Images/actual/6.png",
-  ];
-  let index = 0;
-  setInterval(() => {
-    index = (index + 1) % dogImgPaths.length;
-    dog.src = dogImgPaths[index];
-  }, 4200);
+  let index=0;
+  let dog=[]
+  dog[0]=document.getElementById("dog1");
+  for(let i=1;i<6;i++){
+  dog[i]=document.getElementById("dog"+(i+1));
+  dog[i].style.display="none";
+}
+  setInterval(()=>{
+    index = (index + 1) % 6;
+    dog[index].style.display="block";
+    if(index==0)
+    dog[5].style.display="none"
+    else
+    dog[index-1].style.display="none";
+  },4000)
 };

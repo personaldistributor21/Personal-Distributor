@@ -1,0 +1,279 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="user_profile.css" type="text/css" />
+        <link rel="stylesheet" href="user_header.css" type="text/css" />
+        <link rel="stylesheet" href="dropdown.css" type="text/css" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <title>user</title>
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+       <header class="global-nav">
+        <div class="global-nav_content">
+            <div class="global-nav_top-left-part">
+                <div class="search-global">
+                    <input type="text" placeholder="Search" class="search-global_input">
+                    <div class="search-global_icon-container">
+                        <!-- search icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="search-global_icon" width="16" height="16" focusable="false">
+                            <path d="M14.56 12.44L11.3 9.18a5.51 5.51 0 10-2.12 2.12l3.26 3.26a1.5 1.5 0 102.12-2.12zM3 6.5A3.5 3.5 0 116.5 10 3.5 3.5 0 013 6.5z"/>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+            <nav class="global-nav_top-right-part">
+               <ul class="global-nav_items">
+                <li class="global-nav_item">
+                    <a href="#" class="global-nav_primary-link">
+                     <img src="./images/homeicon.jpg">
+                    <span class="global-nav_primary-link-text">Home</span>
+                    </a>
+                </li>
+
+                <!-- mynetwork -->
+                <li class="global-nav_item">
+                    <a href="#" class="global-nav_primary-link global-nav_primary-link--hover">
+                        <svg  style="fill: white" xmlns="http://www.w3.org/2000/svg" class="global-nav_icon" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="nav-icon" width="24" height="24" focusable="false">
+                            <path d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z"/>
+                    </svg>
+                    <span class="global-nav_primary-link-text">My Network</span>
+                    </a>
+                </li>
+                  
+                <!-- product -->
+                <li class="global-nav_item">
+                    <a href="#" class="global-nav_primary-link global-nav_primary-link--hover">
+                        <img src="./images/producticon.png" >
+                    <span class="global-nav_primary-link-text">Product</span>
+                    </a>
+                </li>
+
+                <!-- services -->
+                <li class="global-nav_item">
+                    <a href="#" class="global-nav_primary-link global-nav_primary-link--hover">
+                        <img src="./images/service.png" >
+                    <span class="global-nav_primary-link-text">Services</span>
+                    </a>
+                </li>
+
+                <!-- user -->
+                <li class="global-nav_item">
+                    <button  class="global-nav_primary-link global-nav_primary-link--btn global-nav_primary-link--hover" onclick="toggleMenu()">
+                        <img src="./images/defualtpic.png" class="global-nav_me-photo" >
+                    <span class="global-nav_primary-link-text">Me
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style="margin-left: 5px;" data-supported-dps="16x16" fill="white"  width="16" height="16" focusable="false">
+                            <path d="M1 5l7 4.61L15 5v2.39L8 12 1 7.39z"/>
+                       </svg>
+                    </span>
+                    </button>
+                </li>
+               </ul>
+
+               <!-- userdropdown -->
+            <div class="sub-menu-wrap">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="./images/defualtpic.png">
+                        <h2>your name</h2>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="./images/profile.png">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="./images/setting.png">
+                        <p>Settings & Privacy</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="./images/help.png">
+                        <p>Help</p>
+                        <span>></span>
+                    </a>
+
+                    <a id="logout" class="sub-menu-link">
+                        <img src="./images/logout.png">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+            </nav>
+        </div>
+       </header>
+
+
+
+       
+       <div class="overlay hidden"></div>
+     <div class="btnshow">
+            
+            <div class="basic_info">
+                <img src="./images/bg.jpg" class="bg">   
+                
+                <div class="profile-pic-div">
+                    <img src="./images/defualtpic.png" id="photo">
+                    <input type="file" id="file">
+                    <label for="file" id="uploadBtn"></label>
+                 </div>  
+            </div>
+            <div class="basic">
+                <p>My Profile</p>
+                <label id="rank">RANKINGS</label><br>
+                <label>Your name</label><br>
+                <label>Contact Number</label><br>
+                <label>Email</label><br>
+                
+                <button id="compelete_pro_b">Complete your Profile</button>
+            </div>
+            <div class="rate">
+               <br><input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text" class="fas fa-star"></label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text" class="fas fa-star"></label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text" class="fas fa-star"></label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text" class="fas fa-star"></label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text" class="fas fa-star"></label>
+              </div>
+           
+        
+        <div class="fragment2">
+            <label>Let's Go!</label>
+            <hr>
+            <div class="dropdown">
+                <button type="button" data-toggle="dropdown">Build a digital Contract 
+                <span class="caret" style="color: white;"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="./build_contract.html">Upload your own contract</a></li><hr>
+                  <li><a href="./build_online_contract.html">Build contract online</a></li>
+                </ul>
+              </div>
+
+            <div class="dropdown">
+                <button type="button" data-toggle="dropdown">Launch a Product 
+                <span class="caret" style="color: white;"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="../home-website/product-division.html">Genesis product</a></li><hr>
+                  <li><a href="#">Launch the project</a></li>
+                </ul>
+              </div>
+
+            <button type="submit" onclick="location.href='../home-website/product-division-team.html'">Build a Team</button>
+            <div class="dropdown">
+                <button type="button" data-toggle="dropdown">Loan it 
+                <span class="caret" style="color: white;"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="./lend_loan.html">Lend a Loan</a></li><hr>
+                  <li><a href="#">Give a Loan</a></li>
+                </ul>
+              </div>
+        </div>
+        <div class="fragment3">
+            <label>My Dashboard</label>
+            <hr>
+            <button type="submit">Manage Contracts</button>
+            <button type="submit">Active Products</button>
+            <button type="submit">Manage Teams</button>
+            <button type="submit">Loan Wallet</button>
+        </div>
+
+    
+         <div class="userdata hidden">
+            <div class="heading">
+                <img onclick="close_ep()" src="./images/close_icon.png">
+                <h2>Edit Profile</h2>
+            </div>
+            <div class="formdata">
+                <form>
+                        <p style="margin-top: 30px;">
+                          <label for="fn">Full Name</label>
+                          <input type="text" id="fn" required>
+                       </p>
+                       <p>
+                        <label for="mail">Official Email</label>
+                        <input type="email" id="mail" required>
+                      </p>
+                      <p>
+                        <label for="phno">Phone Number</label>
+                        <input type="tel" id="phno" >
+                      </p>
+                      <p>
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" >
+                      </p>
+                      <p>
+                        <label for="aadhaarno">Aadhaar card number</label>
+                        <input type="text" id="aadharno" required>
+                      </p>
+                      <p>
+                        <label for="panno">Pan card number</label>
+                        <input type="text" id="panno" required>
+                      </p>
+                      <p>
+                        <label for="pin_code">Enter pin code</label>
+                        <input type="text" id="pin_code" required>
+                     </p>
+                      <p class="radio">
+                        <label for="gender">Gender</label><br>
+                        <label >Male<input type="radio" name="gender" value="male"></label>
+                        <label>Female<input type="radio" name="gender" value="female"></label>
+                        <label >Other<input type="radio" name="gender" value="other"></label>
+                      </p>
+                      <p>
+                        <label for="industry">Types of industry</label>
+                        <select  class="select">
+                            <option  value="" disabled selected hidden>--select--</option>
+                            <option value="primary" >Primary</option>
+                            <option value="secondary">Secondary</option>
+                            <option value="tertiary">Tertiary</option>
+                          </select>
+                        
+                      </p>
+                      <p>
+                        <label for="c_name">Company Name</label>
+                        <input type="text" id="c_name" >
+                      </p>
+                      <p>
+                        <label for="user_designation">User Designation</label>
+                        <select  class="select" name="desi" onchange="optioncolor()" required>
+                            <option  value="" disabled selected hidden>--select--</option>
+                            <option value="Product manager" >Product manager</option>
+                            <option value="Manufacturer">Manufacturer</option>
+                            <option value="investor">Investor</option>
+                            <option value="Channel executive"> Channel executive</option>
+                            <option value="Agent">Agent</option>
+                            <option value="retailer">Retailer</option>
+                          </select>
+                      </p>
+                      <p>
+                        <label for="c_address">Company Address</label>
+                        <textarea  id="c_address" rows="5"></textarea>
+                      </p>
+                      
+                    </form>
+                    </div>
+                   <div class="ep_bottom">
+                    <button type="submit">Save</button>
+                   </div>
+                  
+                
+            </div>
+               
+        </div>
+        
+    <script src="./user_profile.js"></script>
+    </body>
+</html>

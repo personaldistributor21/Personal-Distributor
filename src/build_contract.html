@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./build_conract.css" type="text/css" />
+        <title>contract</title>
+    </head>
+    <body>
+        <div class="upload">
+                     <h2>Upload your own Contract</h2><br>
+                     <form>
+                        <label>Type of contract:</label>
+                        <select>
+                        <option  value="" disabled selected hidden>- - select - -</option>
+                        <option value="Bilateral" >Bilateral</option>
+                        <option value="Unilateral">Unilateral</option>
+                        <option value="Irrevocable">Irrevocable</option>
+                        <option value="Others">Others</option>
+                        </select><br>
+                     
+                        <label>Duration of service:</label>
+                        <input type="text" placeholder="Number"><br>
+                        <label>End of contract:</label>
+                        <input type="date" placeholder="dd/mm/yyyy"><br><br>
+            
+                        <label>Upload PDF File</label>
+                    
+                    
+                        <div class="drag-area">
+                        <div class="icon"><img src="./images/uploadicon.png"></div>
+                        <header>Drop file here</header>
+                        <span class="header">or <span class="button">select file</span></span>
+                        <input type="file" hidden>
+                        </div><br>
+    
+                 <button>submit</button>
+
+                </form>
+            
+        </div>
+
+    </body>
+    
+</html>

@@ -65,31 +65,35 @@
         </div>
 
         <form id="login" class="input-group" style="font-size: 12.5px;">
-          <input type="text" class="input-field" placeholder="User Id/Email Id" required />
-          <input type="text" class="input-field" placeholder="Enter Password" required />
-          <input type="checkbox" class="check-box" /><span>Remember Password</span>
-          <button type="submit" class="submit-btn">Login</button>
+          <input type="email"     class="input-field" id="lmail" placeholder="Enter E-mail / User code" required />
+          <input type="password" class="input-field" id="lpwd" placeholder="Enter Password" minlength="6" required />
+          <input type="checkbox"  class="check-box" /><span>Remember Password</span>
+          <button type="submit"  class="submit-btn" id="loginbtn">Login</button>
         </form>
+      
         <form id="register" class="input-group1">
-          <h5 style=" margin-left:10%;margin-bottom:1%; color: red;"> Registerations are Closed for now!</h5>
-          <input type="email" class="input-field" placeholder="Enter Email Id" required />
-          <input type="text" class="input-field" placeholder="Enter Password" required />
-          <input type="text" class="input-field" placeholder="Company Name" required />
-          <input type="text" class="input-field" placeholder="Company Designation" required />
-          <!-- <input
-            type="text"
-            class="input-field"
-            placeholder="Company Designation"
-            required
-          />
-          <input
-            type="text"
-            class="input-field"
-            placeholder="Company Designation"
-            required
-          /> -->
-          <input type="checkbox" class="check-box" /><span>I agree to terms and conditions</span>
-          <button type="submit" class="submit-btn">Register</button>
+          <input type="text"     class="input-field" id="rname" placeholder="Enter User Name" required />
+          <input type="email"    class="input-field" id="rmail" placeholder="Enter E-mail" required />
+          <input type="password"  class="input-field" id="rpwd" placeholder="Enter Password" minlength="6" required />
+
+          <select  class="select_i" name="industry" id="industry" onchange="changecolor()" required>
+            <option  value="" disabled selected hidden> Types of Industry</option>
+            <option value="primary" >Primary</option>
+            <option value="secondary">Secondary</option>
+            <option value="tertiary">Tertiary</option>
+          </select>
+          <input type="text"  class="input-field" id="cpname" placeholder="Company Name" required />
+          <select  class="select_d" name="Designation" id="desi" onchange="optioncolor()" required>
+            <option  value="" disabled selected hidden> User Designation</option>
+            <option value="Product manager" >Product manager</option>
+            <option value="Manufacturer">Manufacturer</option>
+            <option value="investor">Investor</option>
+            <option value="Channel executive"> Channel executive</option>
+            <option value="Agent">Agent</option>
+            <option value="retailer">Retailer</option>
+          </select>
+          <input type="checkbox" id="t&c" class="check-box" required/><span>I agree to terms and conditions</span>
+          <button type="submit" id="registerbtn" class="submit-btn">Register</button>
         </form>
       </div>
     </div>
@@ -115,22 +119,13 @@
       </div>
     </div>
   </footer> -->
-  <script>
-    var x = document.getElementById("login");
-    var y = document.getElementById("register");
-    var z = document.getElementById("btn");
-    function register() {
-      x.style.left = "-400px";
-      y.style.left = "50px";
-      z.style.left = "110px";
-    }
-    function login() {
-      x.style.left = "50px";
-      y.style.left = "450px";
-      z.style.left = "0px";
-    }
-  </script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script> -->
 
+  <script type="module" src="./firebaseauth.js"></script>
+  <script src="src/login.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
