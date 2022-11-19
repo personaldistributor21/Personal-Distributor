@@ -4,6 +4,11 @@
 <head>
   <title>Login And Registraton Form</title>
   <link rel="stylesheet" href="loginstyle.css" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" /> -->
   <link rel="stylesheet" href="./footer.css" />
@@ -64,11 +69,11 @@
 
         </div>
 
-        <form id="login" class="input-group" style="font-size: 12.5px;">
-          <input type="email"     class="input-field" id="lmail" placeholder="Enter E-mail / User code" required />
-          <input type="password" class="input-field" id="lpwd" placeholder="Enter Password" minlength="6" required />
-          <input type="checkbox"  class="check-box" /><span>Remember Password</span>
-          <button type="submit"  class="submit-btn" id="loginbtn">Login</button>
+        <form id="login" class="input-group" style="font-size: 13px;">
+          <input type="email"     class="input-field " id="lmail" placeholder="Enter E-mail / User code" required /><br>
+          <input type="password" class="input-field"  id="lpwd" placeholder="Enter Password" minlength="6" required /><br>
+          <button type="submit"  class="submit-btn" id="loginbtn">Login</button><br>
+          <a href="#" data-target="#pwdModal" data-toggle="modal">Forgot Password?</a>
         </form>
       
         <form id="register" class="input-group1">
@@ -78,6 +83,7 @@
 
           <select  class="select_i" name="industry" id="industry" onchange="changecolor()" required>
             <option  value="" disabled selected hidden> Types of Industry</option>
+            <option value="Retail" >Retail</option>
             <option value="primary" >Primary</option>
             <option value="secondary">Secondary</option>
             <option value="tertiary">Tertiary</option>
@@ -91,11 +97,43 @@
             <option value="Channel executive"> Channel executive</option>
             <option value="Agent">Agent</option>
             <option value="retailer">Retailer</option>
-          </select>
+          </select><br>
           <input type="checkbox" id="t&c" class="check-box" required/><span>I agree to terms and conditions</span>
-          <button type="submit" id="registerbtn" class="submit-btn">Register</button>
+          <br><button type="submit" id="registerbtn" class="submit-btn">Register</button>
         </form>
       </div>
+    </div>
+  </div>
+
+   <!--modal-->
+   <div id="pwdModal" class="modal fade resetpwdclass" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="col-12 modal-title text-center">Forgot Password</h1>  
+        </div>
+        <div class="modal-body">
+                  <div class="panel-default">
+                      <div class="panel-body">
+                            <p>Please enter your email address.You will receive a link to create a new password via email.</p>
+                              <div class="panel-body">
+                                  <fieldset>
+                                    <form id="resetpwdform">
+                                      <div class="form-group">
+                                          <input class="form-control input-lg" placeholder="E-mail Address" name="email" id="resetemail" type="text" required>
+                                          
+                                      </div>
+                                      <input class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit"  style="background:linear-gradient(to right, #36d1dc, #5b86e5); ;">
+                                    </form>
+                                    </fieldset>
+                              </div>
+                      </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+    </div>
     </div>
   </div>
   <!-- <footer class="footer">
@@ -119,15 +157,13 @@
       </div>
     </div>
   </footer> -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script> -->
-
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script> -->
   <script type="module" src="./firebaseauth.js"></script>
   <script src="src/login.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
 </body>
 
 </html>
