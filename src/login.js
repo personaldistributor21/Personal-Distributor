@@ -15,9 +15,9 @@ var x = document.getElementById("login");
     z.style.left = "0px";
   }
 
-  function changecolor(){
+  function optioncolor(){
  document.querySelector('.select_i').style.color="black";
 }
-function optioncolor(){
+function changecolor(){
   document.querySelector('.select_d').style.color="black";
 }
