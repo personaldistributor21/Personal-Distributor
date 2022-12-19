@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Login And Registraton Form</title>
   <link rel="stylesheet" href="loginstyle.css" />
@@ -81,15 +80,15 @@
           <input type="email"    class="input-field" id="rmail" placeholder="Enter E-mail" required />
           <input type="password"  class="input-field" id="rpwd" placeholder="Enter Password" minlength="6" required />
 
-          <select  class="select_i" name="industry" id="industry" onchange="changecolor()" required>
-            <option  value="" disabled selected hidden> Types of Industry</option>
+          <select  class="select_i" name="industry" id="industry" style=" color: rgb(117, 116, 116);" onchange="optioncolor()" required>
+            <option  value="" disabled selected hidden > Types of Industry</option>
             <option value="Retail" >Retail</option>
             <option value="primary" >Primary</option>
             <option value="secondary">Secondary</option>
             <option value="tertiary">Tertiary</option>
           </select>
           <input type="text"  class="input-field" id="cpname" placeholder="Company Name" required />
-          <select  class="select_d" name="Designation" id="desi" onchange="optioncolor()" required>
+          <select  class="select_d" name="Designation" id="desi" style=" color: rgb(117, 116, 116);" onchange="changecolor()" required>
             <option  value="" disabled selected hidden> User Designation</option>
             <option value="Product manager" >Product manager</option>
             <option value="Manufacturer">Manufacturer</option>
@@ -106,7 +105,7 @@
   </div>
 
    <!--modal-->
-   <div id="pwdModal" class="modal fade resetpwdclass" tabindex="-1" role="dialog" aria-hidden="true">
+   <div id="pwdModal" class="modal fade resetpwdclass" tabindex="-1" role="dialog" aria-hidden="true" hidden>
     <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
@@ -161,6 +160,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script> -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script type="module" src="./firebaseauth.js"></script>
   <script src="src/login.js"></script>
   

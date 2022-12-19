@@ -1,9 +1,8 @@
+
 import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword,sendPasswordResetEmail,onAuthStateChanged,getAuth} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"
-import {getDatabase,ref,set,update,get} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"
+import {getDatabase,ref,set,update,get,child} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"
 
-// import * as nodemailer from "./node_modules/nodemailer/lib/";
-// import { google } from 'https://apis.google.com/js/api.js';
 
     const firebaseConfig = {
       apiKey: "AIzaSyDhnPRXeJJt8Dr3bCIq4Fj0kyGGr9ypb1g",
@@ -16,20 +15,11 @@ import {getDatabase,ref,set,update,get} from "https://www.gstatic.com/firebasejs
       measurementId: "G-F3Q9ZT90FR"
     };
   
-    // Initialize Firebase
+    // // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth();
     const database = getDatabase(app);
     
-
-    // const CLIENT_ID='75902923737-36tqu151oa292kt4vlnm3ek8bhlvgalv.apps.googleusercontent.com'
-    // const CLIENT_SECRET='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'
-    // const REDIRECT_URI='https://developers.google.com/oauthplayground'
-    // const REFRESH_TOKEN='1//0402ypgO-3NJxCgYIARAAGAQSNwF-L9IrhSJ2431zCAmP1ntrBECDc_2nf7gKBKJX4iHQzD9NSi8DJdKvRd4rChXBSIeomknqsPg'
-
-    // const oauth2client=new OAuth2Client(CLIENT_ID,CLIENT_SECRET,REDIRECT_URI)
-    // oauth2client.setCredentials({refresh_token:REFRESH_TOKEN})
-
 
 document.getElementById('register').addEventListener('submit',(e) => {
 
@@ -62,43 +52,18 @@ document.getElementById('register').addEventListener('submit',(e) => {
           })
               .then(() => {
 
-              //   async function sendMail(){
-
-              //     try{
+                Email.send({
+		
+                  Host: "smtp.elasticemail.com",
+                  Username: "contact@personaldistributor.com",
+                  Password: "EE644198A7229A226A4951441B284B9E6E10",
+                  To: rmail,
+                  From: "personaldistributor21@gmail.com",
+                  Subject: "Welcome to Personal Distributor",
+                  Body: "<h3>Name:"+rname+"<br>Password:"+rpwd+"</h3>",
+                })
+                  .then(message => console.log(message));
               
-              //         const accessToken=await google.auth.OAuth2.getAccessToken()
-              
-              //         const transport=nodemailer.createTransport({
-              //             service:'gmail',
-              //             auth:{
-              //                 type:'OAuth2',
-              //                 user:'personaldistributor21@gmail.com',
-              //                 clientId:CLIENT_ID,
-              //                 clientSecret:CLIENT_SECRET,
-              //                 refreshToken:REFRESH_TOKEN,
-              //                 accessToken:accessToken
-              //             }
-              //         })
-              
-              //         const mailOptions={
-              
-              //             from:'personaldistributor21@gmail.com',
-              //             to:rmail,
-              //             subject:'Welocme to Personal Distributor',
-              //             html:"<h2>Hello "+rname+"</h2><br>"
-              //         }
-              
-              //         const result=await transport.sendMail(mailOptions)
-              //         return result
-              //     }
-              //     catch(error){
-              //         return error
-              //     }
-              // }
-              
-              // sendMail().then(result => console.log('email is sent',result))
-              // .catch(error => console.log(error.message))
-                  // Data saved successfully!
                   alert('Register successfully');
                   window.location='./login.html';
 
@@ -174,7 +139,6 @@ document.getElementById('login').addEventListener('submit', (e) => {
             .then(() => {
               // Password reset email sent!
               alert('password reset email sent.please check your inbox')
-              
              
             })
             .catch((error) => {
