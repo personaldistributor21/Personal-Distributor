@@ -1,60 +1,38 @@
-body{
-    background-image: linear-gradient( rgba(255,0,0,0), rgb(223, 195, 240));
-    background-repeat: no-repeat;
-}
-table, th, td {    
-    border: 1px solid black;  
-    margin-left: auto;  
-    margin-right: auto;  
-    border-collapse: collapse;    
-    table-layout: fixed;
-    height:50px; 
-    text-align: center;  
-    font-size: 20px;  
-}  
-.nm{
-    text-align: start;
-    font-size: 25px;
-}
-input[type="file"]{
-    width: 100%;
-    font-size: 20px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-input[type="text"]{
-    border: 1px solid black;
-    width: 80%;
-    height: 30px;
-}
-table button{
-    width: 85%;
-    height: 85%;
-    font-size: 20px;
-    color: white;
-    border: none;
-    background-color: #694b74;
-    cursor: pointer;
-}
-p{
-    margin: 40px;
-    font-size: 25px;
-    color: red;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.submit{
-    width: 200px;
-    height: 40px;
-    font-size: 20px;
-    color: white;
-    background-color: #694b74;
-    border: none;
-    margin-top: 20px;
-    margin-left: 50%;
-    cursor: pointer;
-}
-.number{
-    width: 7%;
-    font-weight: 600;
-}
-
-
+html,body{
+    height:98.3%;
+     background-image: linear-gradient( rgba(255,0,0,0), rgb(223, 195, 240));
+     background-repeat: no-repeat;
+   }
+   .container{
+     margin-top: 30px;
+   }
+   p{
+     font-size: 25px;
+       color: red;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+   }
+   th,td{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 18px;
+   }
+   button{
+     font-size: 25px !important;
+     width: 100%;
+     height: 100%;
+     color: white;
+     background-color: #694b74;
+     border: none;
+     cursor: pointer;
+   }
+   #submitbtn{
+    width: 15%;
+    display: block;
+    margin: 0 auto;
+   }
+   a{
+    text-decoration: none !important;
+    font-size: 22px;
+    color: #694b74 !important;
+    display: none;
+   }

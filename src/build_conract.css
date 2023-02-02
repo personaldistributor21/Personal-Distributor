@@ -1,98 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 html,body{
     padding: 0;
     margin: 0;
     background-image: linear-gradient( rgba(255,0,0,0), rgb(223, 195, 240));
     background-repeat: no-repeat;
 }
-.upload form{
-  margin-left: 30%;
+.btn{
+  background-color: #694b74;
+  color: white;
 }
 label{
   font-size: 22px;
 } 
-.contract{
-  text-align: center;
-  margin-top: 20%;
-}
-.upload h2{
-  margin-top: 20px;
-  margin-left: 45%;
-}
-.upload input[type=text],[type=password],[type=number],select,input[type=date]{
-  width: 25%;
-  margin: 8px 0;
-  padding: 7px 10px;
-  display: inline-block;
-  border:1px solid #ccc;
-  box-sizing: border-box;
-  font-size: 15px;
+#detail_form{
+display: none;
 }
 
-.drag-area {
-  height: 200px;
-  width: 60%;
-  border: 3px dashed #171718;
+.wrapper{
+  max-width: 100%;
+  border-radius: 5px;
+  padding: 30px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 10px 0px;
-  background-color: #e3baf0;
+  border: 2px dashed black;
+  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
 }
-.drag-area header{
-  font-size: 30px;
+section .row{
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.drag-area .header {
-  font-size: 20px;
-  font-weight: 500;
-  color: black;
+section .row i{
+  color: #694b74;
+  font-size: 80px;
+}
+section .details span{
+  font-size: 23px;
 }
 
-.drag-area .button {
-  font-size: 25px;
-  font-weight: 500;
-  color: black;
-  text-decoration: underline black;
+.progress-area .row .details{
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.progress-area .row .details .size{
+  color: #404040;
+  font-size: 20px;
+}
+.progress-area{
+  max-height: 232px;
+}
+.progress-area .row .content{
+  display: flex;
+  align-items: center;
+}
+
+.dot-pulse {
+  position: relative;
+  margin-left: 15px;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #694b74;
+  color: #694b74;
+  box-shadow: 9999px 0 0 -5px;
+  animation: dot-pulse 1.5s infinite linear;
+  animation-delay: 0.25s;
+}
+.dot-pulse::before, .dot-pulse::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #694b74;
+  color: #694b74;
+}
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px;
+  animation: dot-pulse-before 1.5s infinite linear;
+  animation-delay: 0s;
+}
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px;
+  animation: dot-pulse-after 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes dot-pulse-before {
+  0% {
+    box-shadow: 9984px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 9984px 0 0 -5px;
+  }
+}
+@keyframes dot-pulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 9999px 0 0 -5px;
+  }
+}
+@keyframes dot-pulse-after {
+  0% {
+    box-shadow: 10014px 0 0 -5px;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px;
+  }
+  60%, 100% {
+    box-shadow: 10014px 0 0 -5px;
+  }
+}
+
+.uploaded-area{
+  max-height: 232px;
+}
+.uploaded-area.onprogress{
+  max-height: 150px;
+}
+.uploaded-area .row .content{
+  display: flex;
+  align-items: center;
+}
+.uploaded-area .row .details{
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.uploaded-area .row .details .size{
+  color: #404040;
+  font-size: 20px;
+}
+.uploaded-area i.fa-check{
+  font-size: 16px;
+}
+.uploaded-area i.fa-trash-alt{
+  font-size: 20px;
   cursor: pointer;
 }
 
-.drag-area.active {
-  border: 2px solid #1683ff;
+/* duration of service dropdowns */
+.dd{
+  width: 30%;
+  height: 36px;
+  background-color: white;
+  border-width: thin;
+  border-radius: 5px;
+  border-color: rgb(194, 198, 201);
+  color: rgb(100, 102, 104);
 }
-
-.drag-area img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-}
-.upload button{
-  margin-top: 18px;
-    cursor: pointer;
-    border: none;
-    background: #694b74;
-    border-radius: 50px;
-    font-size: 20px;
-    color: white;
-    width: 250px;
-    height: 35px;
-    margin-left: 20%;
-    margin-bottom: 50px;
-}
-.build button{
-    margin-top: 18px;
-      cursor: pointer;
-      border: none;
-      background: #694b74;
-      border-radius: 50px;
-      font-size: 20px;
-      color: white;
-      width: 250px;
-      height: 35px;
-      margin-left: 20%;
-      margin-bottom: 50px;
-}
-button:hover{
-  opacity:0.8;
-}
-
-

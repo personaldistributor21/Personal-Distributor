@@ -1,42 +1,96 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="./build_conract.css" type="text/css" />
-        <title>contract</title>
-    </head>
-    <body>
-        <div class="upload">
-                     <h2>Upload your own Contract</h2><br>
-                     <form>
-                        <label>Type of contract:</label>
-                        <select>
+<head>
+ 
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./build_conract.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <title>contract</title>
+</head>
+ 
+<body>
+  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+  <section class="container-fluid">
+    <!-- row and justify-content-center class is used to place the form in center -->
+    <section class="row justify-content-center">
+      <section class="col-12 col-sm-6 col-md-4">
+        <form class="form-container" id="contract_form">
+        <div class="form-group">
+          <h4 class="text-center font-weight-bold mt-3"> Upload your own Contract </h4>
+          <label>Type of contract:</label>
+                        <select class="form-control" id="contact_type">
                         <option  value="" disabled selected hidden>- - select - -</option>
                         <option value="Bilateral" >Bilateral</option>
                         <option value="Unilateral">Unilateral</option>
                         <option value="Irrevocable">Irrevocable</option>
                         <option value="Others">Others</option>
-                        </select><br>
-                     
-                        <label>Duration of service:</label>
-                        <input type="text" placeholder="Number"><br>
-                        <label>End of contract:</label>
-                        <input type="date" placeholder="dd/mm/yyyy"><br><br>
-            
-                        <label>Upload PDF File</label>
-                    
-                    
-                        <div class="drag-area">
-                        <div class="icon"><img src="./images/uploadicon.png"></div>
-                        <header>Drop file here</header>
-                        <span class="header">or <span class="button">select file</span></span>
-                        <input type="file" hidden>
-                        </div><br>
-    
-                 <button>submit</button>
-
-                </form>
-            
+                        </select>
+        </div>
+          <div class="form-group">
+          <label>Duration of service:</label><br/>
+          <select class="dd" name = "day" id="day_dd"><option value="" disabled selected hidden>day</option></select>
+          <select class="dd" name = "week" id="week_dd"><option value="" disabled selected hidden>week</option></select>
+          <select class="dd" name = "year" id="year_dd"><option value="" disabled selected hidden>year</option></select>
+        </div>
+        <div class="form-group">
+          <label for="InputPassword1">Start of contract:</label>
+          <input type="date" placeholder="dd/mm/yyyy" class="form-control" id="start_contract">
+        </div>
+        <div class="form-group">
+          <label for="InputPassword1">End of contract:</label>
+          <input type="date" placeholder="dd/mm/yyyy" class="form-control" id="end_contract">
         </div>
 
-    </body>
-    
+        <label>Upload PDF File</label>
+
+        <div class="form-group">
+                    <section class="image-upload-wrap" >
+                        <input class="file-input" type="file" id="file" hidden>
+                        <label for="file">
+                        <div class="wrapper">
+                              <i class="fas fa-cloud-upload-alt"></i>
+                              <p>Browse File to Upload</p> 
+                        </div></label>
+                            <section class="progress-area"></section>
+                            <section class="uploaded-area"></section>
+                    </section>   
+        </div>
+        <button type="submit" class="btn btn-block">Submit</button>
+        </form>
+
+
+        <!-- display information of contract -->
+        <form class="form-container" id="detail_form">
+          <div class="form-group">
+            <h4 class="text-center font-weight-bold mt-3"> Your Contract details </h4>
+            <label id="type_contract"></label><br>
+            <label id="service_duration"></label><br>
+            <label id="contract_start"></label><br>
+            <label id="contract_end"></label><br>
+            <label id="contract_pdf_name"></label>
+          </div>
+        </form>
+
+
+
+      </section>
+    </section>
+  </section>
+<!-- Login form creation ends -->
+
+<script type="module" src="Database/contractdatabase.js"></script>
+</body>
 </html>
+
+
+
