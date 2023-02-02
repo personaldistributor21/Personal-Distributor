@@ -26,7 +26,7 @@
         
                   <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0" style="font-size:12px">
                     <li>
-                      <a href="#" class="nav-link text-white">
+                      <a href="../home-website/index.html" class="nav-link text-white">
                         <i class="fa fa-home bi d-block mx-auto mb-1 text-center" style="font-size:22px;color:white"></i>Home
                       </a>
                     </li>
@@ -41,7 +41,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="nav-link text-white">
+                      <a href="../home-website/permanentmarket.html" class="nav-link text-white">
                         <i class="fa fa-th-large bi d-block mx-auto mb-1 text-center" style="font-size:22px;color:white"></i>Products
                       </a>
                     </li>
@@ -50,10 +50,10 @@
                         <i class="fa fa-user-circle bi d-block mx-auto mb-1 text-center" style="font-size:22px;color:white"></i>Me
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Edit profile</a></li><hr>
+                        <li><a class="dropdown-item" id="edit_profile" href="#"><i class="fa fa-user"></i> Edit profile</a></li><hr>
                         <li><a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings & Privacy</a></li><hr>
                         <li><a class="dropdown-item" href="#"><i class="fa fa-question-circle"></i> Help</a></li><hr>
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        <li><a class="dropdown-item" href="#" id="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -74,12 +74,14 @@
                     <img src="./images/bg.jpg" class="card-img">
                     <div class="card-body">
                       <div class="d-flex flex-column">
-                        <div style="margin-top: -120px;">
-                        <img src="./images/defualtpic.png" alt="Admin" class="rounded-circle p-1" width="150">
-                        </div>
-                        <div class="mt-1">
+                        <div class="profile_pic_div">
+                        <img src="./images/defualtpic.png" alt="Admin" id="photo">
+                       <input type="file" id="file">
+                       <label for="file" id="uploadbtn">Choose photo</label>
+                      </div>
+                        <div class="mt-3">
                           <h4 class="ms-3" id="name">Your name</h4>
-                          <p class="text-secondary font-size-sm">RANKINGS</p>
+                          <p class=" font-size-sm">RANKINGS</p>
                           <div class="rate">
                             <input type="radio" id="star5" name="rate" value="5" />
                              <label for="star5" title="text" class="fa fa-star"></label>
@@ -92,8 +94,8 @@
                              <input type="radio" id="star1" name="rate" value="1" />
                              <label for="star1" title="text" class="fa fa-star"></label>
                            </div><br><br>
-                          <p class="text-secondary mb-1">Contact number</p>
-                          <p class="text-muted font-size-sm">Email</p>
+                          <p class="mb-1" id="d_phoneno">User ID</p>
+                          <p class="font-size-sm" id="d_email">Email</p>
                           <button class="btn_profile" id="cp_btn">Complete your Profile</button>
                         </div>
                       </div>
@@ -151,6 +153,18 @@
                           </ul>
                         </div>
                       </div>
+
+                      <div class="row">
+                        <div class="dropdown col-sm">
+                          <button class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                          Insure it
+                          </button>
+                          <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="./insurance.html">Insurance</a></li><hr>
+                            <li><a class="dropdown-item" href="#">Tracking</a></li>
+                          </ul>
+                        </div>
+                      </div>
                       
                     </div>
                   </div>
@@ -197,6 +211,7 @@
         </div>
         <div class="overlay hidden"></div>
 <!-- edit profile -->
+   <form id="editproform">
         <div class="edit_profile hidden" style="width: 50%;" >
           <div class="container" >
             <div class="col-lg-12" >
@@ -211,58 +226,59 @@
               
                   <div class="row ms-2 mb-3">
                     <div class="col-sm-12">
+                      <h6 class="mb-3" style="font-family:cursive; color: red;">All the fields are required</h6>
                       <h6 class="mb-2">Full Name</h6>
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" id="fname" required>
                     </div>
                   </div>
                   <div class="row ms-2 mb-3">
                     <div class="col-sm-12">
                       <h6 class="mb-2">Official Email</h6>
-                      <input type="email" class="form-control">
+                      <input type="email" class="form-control" id="email" required>
                     </div>
                   </div>
                     <div class="row  ms-2 mb-3">
                       <div class="col-sm-12">
                         <h6 class="mb-2">Phone Number</h6>
-                        <input type="tel" class="form-control">
+                        <input type="tel" class="form-control" id="phoneno" required>
                       </div>
                     </div>
                       <div class="row  ms-2 mb-3">
                         <div class="col-sm-12">
                           <h6 class="mb-2">Date of Birth</h6>
-                          <input type="date" class="form-control">
+                          <input type="date" class="form-control" id="dob" required>
                         </div>
                       </div>
                       <div class="row ms-2 mb-3">
                         <div class="col-sm-12">
                           <h6 class="mb-2">Aadhaar card number</h6>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" id="aadharno" required>
                         </div>
                       </div>
                       <div class="row ms-2 mb-3">
                         <div class="col-sm-12">
                           <h6 class="mb-2">Pan card number</h6>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" id="panno" required> 
                         </div>
                       </div>
                         <div class="row ms-2 mb-3">
                           <div class="col-sm-12">
                             <h6 class="mb-2">Enter pin code</h6>
-                            <input type="text" class="form-control">
+                            <input type="tel" class="form-control" id="pincode" required> 
                           </div>
                         </div>
                         <div class="row ms-2 mb-3">
                           <div class="col-sm-12">
                             <h6 class="mb-2">Gender</h6>
-                           <input type="radio"> Female
-                           <input class="ms-5" type="radio"> Male
-                           <input class="ms-5" type="radio"> Others
+                           <input type="radio" name="gender" value="female"> Female
+                           <input class="ms-5" type="radio" name="gender" value="male"> Male
+                           <input class="ms-5" type="radio" name="gender" value="others"> Others
                           </div>
                         </div>
                         <div class="row ms-2 mb-3">
                           <div class="col-sm-12">
                             <h6 class="mb-2">Types of industry</h6>
-                            <select  class="select col-12" style="height: 35px;">
+                            <select  id="industry" class="select col-12 " style="height: 35px;" >
                               <option  value="" disabled selected hidden>--select--</option>
                               <option value="primary" >Primary</option>
                               <option value="secondary">Secondary</option>
@@ -272,8 +288,8 @@
                         </div>
                         <div class="row ms-2 mb-3">
                           <div class="col-sm-12">
-                            <h6 class="mb-2">Types of industry</h6>
-                            <select  class="select col-12" style="height: 35px;" >
+                            <h6 class="mb-2">User Designation</h6>
+                            <select id="desi" class="select col-12" style="height: 35px;" >
                               <option  value="" disabled selected hidden>--select--</option>
                               <option value="Product manager" >Product manager</option>
                               <option value="Manufacturer">Manufacturer</option>
@@ -287,13 +303,13 @@
                         <div class="row ms-2 mb-3">
                           <div class="col-sm-12">
                             <h6 class="mb-2">Company name</h6>
-                           <input type="text" class="form-control"> 
+                           <input type="text" class="form-control" id="cname" required> 
                           </div>
                         </div>
                         <div class="row ms-2 mb-3">
                           <div class="col-sm-12">
                             <h6 class="mb-2">Company Address</h6>
-                           <textarea rows="4" class="form-control"></textarea>
+                           <textarea rows="4" class="form-control" id="caddress" required></textarea>
                           </div>
                         </div>
                       </div>
@@ -302,16 +318,18 @@
               <hr class="line">
               <div class="row mb-3">
                 <div class="col-sm-12">
-                  <button class="btn_save">Save</button>
+                  <button class="btn_save" id="btnsave">Save</button>
                 </div>
               </div>
             </div>
           </div>
-          </div>
+        </div>
+      </form>
 
-          <script type="module" src="./firebaseauth.js"></script>
+          <script type="module" src="Database/firebasedatabase.js"></script>
           <script src="./user_profile.js"></script>
           <!-- <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     -->
         </body>
 </html>
+

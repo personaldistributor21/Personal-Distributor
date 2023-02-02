@@ -34,7 +34,7 @@ document.getElementById('register').addEventListener('submit',(e) => {
       var rname=document.getElementById("rname").value;
       var industry=document.getElementById("industry").value;
       var company_name=document.getElementById("cpname").value;
-      var company_designation=document.getElementById("desi").value;
+      var user_designation=document.getElementById("desi").value;
   
       createUserWithEmailAndPassword(auth, rmail, rpwd)
       .then((userCredential) => {
@@ -43,12 +43,12 @@ document.getElementById('register').addEventListener('submit',(e) => {
 
           
           // ... user.uid
-          set(ref(database, 'WebUsers/Login/' + user.uid), {
+          set(ref(database, 'WebUsers/Login/' + user.uid+'/User_details'), {
               Name:rname,
               Email: rmail,
               Industry:industry,
               Company_name:company_name,
-              Company_designation:company_designation,
+              User_designation:user_designation,
           })
               .then(() => {
 
@@ -60,7 +60,7 @@ document.getElementById('register').addEventListener('submit',(e) => {
                   To: rmail,
                   From: "personaldistributor21@gmail.com",
                   Subject: "Welcome to Personal Distributor",
-                  Body: "<h3>Name:"+rname+"<br>Password:"+rpwd+"</h3>",
+                  Body: "Congratulations on becoming a personal distributor!<br>We support those who believe in quality and want to help the world with their unique products.welcome to the community where thousands of smart entrepreneurs like yourself help each other build their dreams.<br>The path is not easy and the struggle is real.But we are in it together.So don’t hesitate to ask for help<br>The world needs you!<br>Good Luck!",
                 })
                   .then(message => console.log(message));
               
@@ -107,7 +107,7 @@ document.getElementById('login').addEventListener('submit', (e) => {
                         // Data saved successfully!
                         onAuthStateChanged(auth,(user) => {
                           if(user) {
-                            window.location = 'src/user_profile.html'; 
+                            window.location.replace('src/user_profile.html'); 
                           }
                         });
                       
@@ -151,39 +151,7 @@ document.getElementById('login').addEventListener('submit', (e) => {
 
  })
 
-    // function logoutuser(){
-
-    //     e.preventDefault();
-
-    //     signOut(auth).then(() => {
-    //         // Sign-out successful.
-    //        window.location = './login.html';
-    //       }).catch((error) => {
-    //         console.log(error);
-    //       });
-    // }
     
-    const dbRef = ref(database);
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                get(child(dbRef, 'WebUsers/Login/' + user.uid)).then((snapshot) => {
-                    if (snapshot.exists()) {
-                      var name=snapshot.val().Name;
-                      document.getElementById('name').innerHTML=name;
-                    } else {
-                      console.log("No data available");
-                    }
-                  }).catch((error) => {
-                    console.error(error);
-                  });
-                  
-              console.log('User is signed in');
-              // ...
-            } else {
-              console.log('User is signed out');
-              // ...
-            }
-          });
 
           
 

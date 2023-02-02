@@ -10,6 +10,9 @@
 //     },
 //   });
 
+document.getElementById('all_item').addEventListener('click',(e)=>{
+window.location='./All_item.html';
+})
 
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
